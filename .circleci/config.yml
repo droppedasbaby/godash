@@ -1,0 +1,18 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: cimg/go:1.19
+    resource_class: small
+    steps:
+      - checkout
+      - run:
+          name: "Installing the linter"
+          command: curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.50.1
+      - run:
+          name: "Running the linter"
+          command: golangci-lint run
+      - run:
+          name: "Testing the code"
+          command: go test ./... -v -cover

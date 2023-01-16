@@ -19,3 +19,10 @@
 
 # Go workspace file
 go.work
+
+# Idea/IntelliJ project files
+.idea/
+*.iml
+
+# MacOS
+.DS_Store
