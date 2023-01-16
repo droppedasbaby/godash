@@ -11,17 +11,17 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 
 ## To-Do:
 
-Only functions that are themselves written and are unit tested are marked as done.
+Only functions that are themselves written and are unit tested are marked as done unless they are one-liners.
 
 - [x] Conditions
 
 - [x] Types
 
-- [ ] Utils
-    - [ ] Optional
-    - [ ] Panics
-    - [ ] ResultWithError
-    - [ ] Testing
+- [x] Utils
+    - [x] Optional
+    - [x] Panics
+    - [x] ResultWithError
+    - [x] Testing
 
 - [ ] Maps
     - [ ] Add
