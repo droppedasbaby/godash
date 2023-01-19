@@ -2,8 +2,7 @@
 
 Modeled after the [lodash](https://lodash.com/) library, godash is a collection of useful functions for working with
 slices/arrays, maps, sets, hashable sets, optionals and more. It is meant to help you write more concise and readable
-code in a functional way. So, in any case, the original data structure passed in is never edited. A copy is always
-returned.
+code in a functional way.
 
 It is a work in progress, I will be adding more functions as I need them/as I have time.
 
