@@ -22,14 +22,14 @@ Only functions that are themselves written and are unit tested are marked as don
     - [x] ResultWithError
     - [x] Testing
 
-- [ ] Maps
-    - [ ] Add
-    - [ ] Remove
-    - [ ] Contains
-    - [ ] Keys
-    - [ ] Values
-    - [ ] ToPairs
-    - [ ] FromPairs
+- [-] Maps
+    - [-] FromMap
+    - [-] ToMap
+    - [-] Add
+    - [-] Remove
+    - [-] Contains
+    - [-] Keys
+    - [-] Values
 
 
 - [ ] HashableMap
@@ -42,8 +42,8 @@ Only functions that are themselves written and are unit tested are marked as don
     - [ ] FromPairs
 
 - [ ] Set
-    - [ ] FromSet
-    - [ ] ToSet
+    - [-] FromSet
+    - [-] ToSet
     - [ ] Add
     - [ ] Contains
     - [ ] Difference
