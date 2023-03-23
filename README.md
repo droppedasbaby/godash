@@ -22,13 +22,13 @@ Only functions that are themselves written and are unit tested are marked as don
     - [x] Testing
 
 - [-] Maps
-    - [-] FromMap
-    - [-] ToMap
+    - [x] FromMap
+    - [x] ToMap
     - [ ] Add
     - [ ] Remove
-    - [-] Contains
-    - [-] Keys
-    - [-] Values
+    - [x] Contains
+    - [x] Keys
+    - [x] Values
 
 
 - [ ] HashableMap
