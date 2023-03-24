@@ -127,46 +127,46 @@ func TestFilter_WithString(t *testing.T) {
 func TestFilter_WithArbStruct(t *testing.T) {
 	t.Parallel()
 	type testStruct struct {
-		X int
-		Y int
+		x int
+		y int
 	}
 
 	testCases := []utils.GenericTestCase[
 		utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) bool], []testStruct]{
 		{
-			Name: "filter elements where X is even",
+			Name: "filter elements where x is even",
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) bool]{
 				A: []testStruct{
-					{X: 1, Y: 10},
-					{X: 2, Y: 20},
-					{X: 3, Y: 30},
-					{X: 4, Y: 40},
+					{x: 1, y: 10},
+					{x: 2, y: 20},
+					{x: 3, y: 30},
+					{x: 4, y: 40},
 				},
 				B: func(v testStruct) bool {
-					return v.X%2 == 0
+					return v.x%2 == 0
 				},
 			},
 			Want: []testStruct{
-				{X: 2, Y: 20},
-				{X: 4, Y: 40},
+				{x: 2, y: 20},
+				{x: 4, y: 40},
 			},
 		},
 		{
-			Name: "filter elements where Y is greater than X",
+			Name: "filter elements where y is greater than x",
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) bool]{
 				A: []testStruct{
-					{X: 5, Y: 15},
-					{X: 6, Y: 4},
-					{X: 7, Y: 10},
-					{X: 8, Y: 8},
+					{x: 5, y: 15},
+					{x: 6, y: 4},
+					{x: 7, y: 10},
+					{x: 8, y: 8},
 				},
 				B: func(v testStruct) bool {
-					return v.Y > v.X
+					return v.y > v.x
 				},
 			},
 			Want: []testStruct{
-				{X: 5, Y: 15},
-				{X: 7, Y: 10},
+				{x: 5, y: 15},
+				{x: 7, y: 10},
 			},
 		},
 	}

@@ -91,46 +91,46 @@ func TestMap_WithFloat64(t *testing.T) {
 func TestMap_WithArbStruct(t *testing.T) {
 	t.Parallel()
 	type testStruct struct {
-		X int
-		Y int
+		x int
+		y int
 	}
 
 	testCases := []utils.GenericTestCase[
 		utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) testStruct], []testStruct]{
 		{
-			Name: "increment X and double Y",
+			Name: "increment x and double y",
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) testStruct]{
 				A: []testStruct{
-					{X: 1, Y: 10},
-					{X: 2, Y: 20},
-					{X: 3, Y: 30},
+					{x: 1, y: 10},
+					{x: 2, y: 20},
+					{x: 3, y: 30},
 				},
 				B: func(v testStruct) testStruct {
-					return testStruct{X: v.X + 1, Y: v.Y * 2}
+					return testStruct{x: v.x + 1, y: v.y * 2}
 				},
 			},
 			Want: []testStruct{
-				{X: 2, Y: 20},
-				{X: 3, Y: 40},
-				{X: 4, Y: 60},
+				{x: 2, y: 20},
+				{x: 3, y: 40},
+				{x: 4, y: 60},
 			},
 		},
 		{
-			Name: "double X and subtract Y by 5",
+			Name: "double x and subtract y by 5",
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) testStruct]{
 				A: []testStruct{
-					{X: 5, Y: 15},
-					{X: 6, Y: 30},
-					{X: 7, Y: 45},
+					{x: 5, y: 15},
+					{x: 6, y: 30},
+					{x: 7, y: 45},
 				},
 				B: func(v testStruct) testStruct {
-					return testStruct{X: v.X * 2, Y: v.Y - 5}
+					return testStruct{x: v.x * 2, y: v.y - 5}
 				},
 			},
 			Want: []testStruct{
-				{X: 10, Y: 10},
-				{X: 12, Y: 25},
-				{X: 14, Y: 40},
+				{x: 10, y: 10},
+				{x: 12, y: 25},
+				{x: 14, y: 40},
 			},
 		},
 		{
@@ -138,7 +138,7 @@ func TestMap_WithArbStruct(t *testing.T) {
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) testStruct]{
 				A: []testStruct{},
 				B: func(v testStruct) testStruct {
-					return testStruct{X: v.X + 1, Y: v.Y * 2}
+					return testStruct{x: v.x + 1, y: v.y * 2}
 				},
 			},
 			Want: []testStruct{},
