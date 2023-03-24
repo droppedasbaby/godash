@@ -88,12 +88,8 @@ func TestMap_WithFloat64(t *testing.T) {
 	utils.RunTwoArgumentTestCases(t, "Map()", slices.Map[float64, float64], testCases)
 }
 
-func TestMap_WithArbStruct(t *testing.T) {
+func TestMap_WithTestStruct(t *testing.T) {
 	t.Parallel()
-	type testStruct struct {
-		x int
-		y int
-	}
 
 	testCases := []utils.GenericTestCase[
 		utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) testStruct], []testStruct]{
@@ -146,4 +142,55 @@ func TestMap_WithArbStruct(t *testing.T) {
 	}
 
 	utils.RunTwoArgumentTestCases(t, "Map()", slices.Map[testStruct, testStruct], testCases)
+}
+
+func TestMap_WithTestStructToInt(t *testing.T) {
+	testStructTestCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int], []int]{
+		{
+			Name: "empty slice",
+			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int]{
+				A: []testStruct{},
+				B: func(v testStruct) int { return v.x },
+			},
+			Want: []int{},
+		},
+		{
+			Name: "multiply x and y fields",
+			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int]{
+				A: []testStruct{
+					{x: 1, y: 2},
+					{x: 3, y: 4},
+					{x: 5, y: 6},
+				},
+				B: func(v testStruct) int { return v.x * v.y },
+			},
+			Want: []int{2, 12, 30},
+		},
+		{
+			Name: "subtract x from y fields",
+			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int]{
+				A: []testStruct{
+					{x: 1, y: 2},
+					{x: 3, y: 4},
+					{x: 5, y: 6},
+				},
+				B: func(v testStruct) int { return v.y - v.x },
+			},
+			Want: []int{1, 1, 1},
+		},
+		{
+			Name: "sum of x and y fields",
+			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int]{
+				A: []testStruct{
+					{x: 1, y: 2},
+					{x: 3, y: 4},
+					{x: 5, y: 6},
+				},
+				B: func(v testStruct) int { return v.x + v.y },
+			},
+			Want: []int{3, 7, 11},
+		},
+	}
+
+	utils.RunTwoArgumentTestCases(t, "Map()", slices.Map[testStruct, int], testStructTestCases)
 }

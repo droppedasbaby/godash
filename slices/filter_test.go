@@ -124,7 +124,7 @@ func TestFilter_WithString(t *testing.T) {
 	utils.RunTwoArgumentTestCases(t, "Filter()", slices.Filter[string], testCases)
 }
 
-func TestFilter_WithArbStruct(t *testing.T) {
+func TestFilter_WithTestStruct(t *testing.T) {
 	t.Parallel()
 	type testStruct struct {
 		x int
