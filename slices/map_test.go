@@ -145,7 +145,9 @@ func TestMap_WithTestStruct(t *testing.T) {
 }
 
 func TestMap_WithTestStructToInt(t *testing.T) {
-	testStructTestCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int], []int]{
+	t.Parallel()
+	testStructTestCases := []utils.GenericTestCase[
+		utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int], []int]{
 		{
 			Name: "empty slice",
 			Args: utils.TwoArgumentTestCasesArgsType[[]testStruct, func(testStruct) int]{

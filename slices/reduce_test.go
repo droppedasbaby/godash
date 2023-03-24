@@ -1,10 +1,11 @@
 package slices_test
 
 import (
-	"godash/slices"
-	"godash/utils"
 	"math"
 	"testing"
+
+	"godash/slices"
+	"godash/utils"
 )
 
 func TestReduce_WithInt(t *testing.T) {
@@ -136,6 +137,7 @@ func TestReduce_WithTestStruct(t *testing.T) {
 }
 
 func TestReduce_WithTestStructToInt(t *testing.T) {
+	t.Parallel()
 	testCases := []utils.GenericTestCase[
 		utils.ThreeArgumentTestCasesArgsType[[]testStruct, func(int, testStruct) int, int], int]{
 		{
