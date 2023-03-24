@@ -40,6 +40,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] Add - Modifies original DS, does not return a new on
     - [ ] AddAll - Modifies original DS, does not return a new one
     - [ ] Remove - Modifies original DS, does not return a new one
+    - [ ] RemoveAll - Modifies original DS, does not return a new one
     - [ ] Contains
     - [ ] Keys
     - [ ] Values
