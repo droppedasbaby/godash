@@ -9,7 +9,8 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 
 ## To-Do:
 
-Only functions that are themselves written and are unit tested are marked as done unless they are one-liners.
+Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function 
+that do not have tests are marked with a `-` instead of a `x`.
 
 - [x] Conditions
 
@@ -24,8 +25,8 @@ Only functions that are themselves written and are unit tested are marked as don
 - [-] Maps
     - [x] FromMap
     - [x] ToMap
-    - [ ] Add
-    - [ ] Remove
+    - [ ] Add - Modifies original DS, does not return a new one
+    - [ ] Remove - Modifies original DS, does not return a new one
     - [x] Contains
     - [x] Keys
     - [x] Values
@@ -34,15 +35,15 @@ Only functions that are themselves written and are unit tested are marked as don
 - [ ] HashableMap
     - [ ] FromHashableMap
     - [ ] ToHashableMap
-    - [ ] Add
-    - [ ] Remove
+    - [ ] Add - Modifies original DS, does not return a new one
+    - [ ] Remove - Modifies original DS, does not return a new one
     - [ ] Contains
     - [ ] Keys
     - [ ] Values
 
 - [ ] Set
-    - [-] FromSet
-    - [-] ToSet
+    - [x] FromSet
+    - [x] ToSet
     - [ ] Add
     - [ ] Contains
     - [ ] Difference

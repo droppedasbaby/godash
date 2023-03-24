@@ -4,17 +4,17 @@ package set
 // true.
 type Set[T comparable] map[T]bool
 
-// FromSet returns a set from a slice.
-func FromSet[C comparable](slice []C) (s Set[C]) {
-	s = make(Set[C])
+// ToSet returns a set from a slice.
+func ToSet[C comparable](slice []C) (s Set[C]) {
+	s = Set[C]{}
 	for _, v := range slice {
 		s[v] = true
 	}
 	return s
 }
 
-// ToSet returns a slice from a set.
-func ToSet[C comparable](set Set[C]) (s []C) {
+// FromSet returns a slice from a set.
+func FromSet[C comparable](set Set[C]) (s []C) {
 	s = make([]C, 0)
 	for k := range set {
 		s = append(s, k)
