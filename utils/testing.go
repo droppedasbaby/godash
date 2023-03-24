@@ -72,6 +72,34 @@ func RunTwoArgumentTestCases[T, U, R any](
 	}
 }
 
+// ThreeArgumentTestCasesArgsType is the type of the arguments for a three argument test case.
+type ThreeArgumentTestCasesArgsType[T, U, V any] struct {
+	A T
+	B U
+	C V
+}
+
+// RunThreeArgumentTestCases runs a set of test cases for a function that takes three arguments.
+func RunThreeArgumentTestCases[T, U, V, R any](
+	t *testing.T,
+	testName string,
+	runFn func(T, U, V) R,
+	testCases []GenericTestCase[ThreeArgumentTestCasesArgsType[T, U, V], R],
+) {
+	t.Helper()
+
+	for _, tc := range testCases {
+		testCase := tc
+		t.Run(testCase.Name, func(t *testing.T) {
+			t.Parallel()
+			got := runFn(testCase.Args.A, testCase.Args.B, testCase.Args.C)
+			if !reflect.DeepEqual(got, testCase.Want) {
+				t.Errorf("%v = %v, want %v", testName, got, testCase.Want)
+			}
+		})
+	}
+}
+
 var ErrTestCasesAndWantsLenDiff = fmt.Errorf("test cases and wants length differ")
 
 // TestCasesArgsType is the type of the arguments for a test case.

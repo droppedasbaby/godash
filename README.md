@@ -22,11 +22,13 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ResultWithError
     - [x] Testing
 
-- [-] Maps
+- [x] Maps
     - [x] FromMap
     - [x] ToMap
-    - [ ] Add - Modifies original DS, does not return a new one
-    - [ ] Remove - Modifies original DS, does not return a new one
+    - [x] Add - Modifies original DS, does not return a new one
+    - [x] AddAll - Modifies original DS, does not return a new one
+    - [x] Remove - Modifies original DS, does not return a new one
+    - [x] RemoveAll - Modifies original DS, does not return a new one 
     - [x] Contains
     - [x] Keys
     - [x] Values
@@ -35,7 +37,8 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [ ] HashableMap
     - [ ] FromHashableMap
     - [ ] ToHashableMap
-    - [ ] Add - Modifies original DS, does not return a new one
+    - [ ] Add - Modifies original DS, does not return a new on
+    - [ ] AddAll - Modifies original DS, does not return a new one
     - [ ] Remove - Modifies original DS, does not return a new one
     - [ ] Contains
     - [ ] Keys

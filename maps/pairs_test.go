@@ -30,7 +30,7 @@ func TestFromMap(t *testing.T) {
 	utils.RunSingleArgumentTestCases(t, "FromMap()", maps.FromMap[string, int], testCases)
 }
 
-func TestFromMapWithIntKeys(t *testing.T) {
+func TestFromMap_WithIntKeys(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[
@@ -79,7 +79,7 @@ func TestToMap(t *testing.T) {
 	}, testCases)
 }
 
-func TestToMapWithIntKeys(t *testing.T) {
+func TestToMap_WithIntKeys(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[

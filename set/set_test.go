@@ -1,13 +1,15 @@
 package set_test
 
 import (
-	"godash/set"
-	"godash/utils"
 	"sort"
 	"testing"
+
+	"godash/set"
+	"godash/utils"
 )
 
 func TestToSet(t *testing.T) {
+	t.Parallel()
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[[]string], set.Set[string]]{
 		{
 			Name: "Empty Slice",
@@ -24,7 +26,8 @@ func TestToSet(t *testing.T) {
 	utils.RunSingleArgumentTestCases(t, "ToSet()", set.ToSet[string], testCases)
 }
 
-func TestToSetWithInts(t *testing.T) {
+func TestToSet_WithInts(t *testing.T) {
+	t.Parallel()
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[[]int], set.Set[int]]{
 		{
 			Name: "Empty Slice",
@@ -42,6 +45,7 @@ func TestToSetWithInts(t *testing.T) {
 }
 
 func TestFromSet(t *testing.T) {
+	t.Parallel()
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[set.Set[string]], []string]{
 		{
 			Name: "Empty Set",
@@ -62,7 +66,8 @@ func TestFromSet(t *testing.T) {
 	}, testCases)
 }
 
-func TestFromSetWithInts(t *testing.T) {
+func TestFromSet_WithInts(t *testing.T) {
+	t.Parallel()
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[set.Set[int]], []int]{
 		{
 			Name: "Empty Set",

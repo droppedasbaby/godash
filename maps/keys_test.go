@@ -8,7 +8,7 @@ import (
 	"godash/utils"
 )
 
-func TestKeys_IntString(t *testing.T) {
+func TestKeys_WithIntString(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[map[int]string], []int]{
@@ -42,7 +42,7 @@ func TestKeys_IntString(t *testing.T) {
 	}, testCases)
 }
 
-func TestKeys_StringFloat64(t *testing.T) {
+func TestKeys_WithStringFloat64(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[map[string]float64], []string]{

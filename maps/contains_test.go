@@ -7,7 +7,7 @@ import (
 	"godash/utils"
 )
 
-func TestContains_StringInt(t *testing.T) {
+func TestContains_WithStringInt(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[map[string]int, string], bool]{
@@ -32,7 +32,7 @@ func TestContains_StringInt(t *testing.T) {
 	utils.RunTwoArgumentTestCases(t, "Contains()", maps.Contains[string, int], testCases)
 }
 
-func TestContains_Float64Bool(t *testing.T) {
+func TestContains_WithFloat64Bool(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[map[float64]bool, float64], bool]{
