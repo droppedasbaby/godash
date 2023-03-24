@@ -81,12 +81,12 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] DropRight
     - [ ] DropRightWhile
     - [x] Filter
-    - [-] ForEach
+    - [x] ForEach
     - [ ] Head
     - [x] Map
     - [ ] Range
     - [ ] RangeRight
-    - [-] Reduce
+    - [x] Reduce
     - [ ] Tail
     - [ ] Take
     - [ ] TakeWhile
