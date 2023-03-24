@@ -24,7 +24,7 @@ type SingleArgumentTestCasesArgsType[T any] struct {
 	A T
 }
 
-// RunSingleArgumentTestCases runs a set of test cases for a function that takes a single argument.
+// RunSingleArgumentTestCases runs a sets of test cases for a function that takes a single argument.
 func RunSingleArgumentTestCases[T, R any](
 	t *testing.T,
 	testName string,
@@ -51,7 +51,7 @@ type TwoArgumentTestCasesArgsType[T, U any] struct {
 	B U
 }
 
-// RunTwoArgumentTestCases runs a set of test cases for a function that takes two arguments.
+// RunTwoArgumentTestCases runs a sets of test cases for a function that takes two arguments.
 func RunTwoArgumentTestCases[T, U, R any](
 	t *testing.T,
 	testName string,
@@ -79,7 +79,7 @@ type ThreeArgumentTestCasesArgsType[T, U, V any] struct {
 	C V
 }
 
-// RunThreeArgumentTestCases runs a set of test cases for a function that takes three arguments.
+// RunThreeArgumentTestCases runs a sets of test cases for a function that takes three arguments.
 func RunThreeArgumentTestCases[T, U, V, R any](
 	t *testing.T,
 	testName string,
@@ -107,7 +107,7 @@ type TestCasesArgsType[T any] interface {
 	SingleArgumentTestCasesArgsType[T] | TwoArgumentTestCasesArgsType[T, T]
 }
 
-// AddWantToTestCases adds a wants to a set of test cases with optional wants.
+// AddWantToTestCases adds a wants to a sets of test cases with optional wants.
 func AddWantToTestCases[A any, W any, WS []W](
 	data []GenericTestCaseWithNoWant[SingleArgumentTestCasesArgsType[A]],
 	wants []WS) ResultWithError[[]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]] {
@@ -118,7 +118,7 @@ func AddWantToTestCases[A any, W any, WS []W](
 	}
 
 	for i, element := range data {
-		want := make([]W, len(wants[i]))
+		want := []W{}
 		copy(want, wants[i])
 
 		testCases[i] = GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]{

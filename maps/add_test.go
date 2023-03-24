@@ -33,7 +33,7 @@ func TestAdd(t *testing.T) {
 	}, testCases)
 }
 
-func TestAdd_WithInts(t *testing.T) {
+func TestAdd_WithString(t *testing.T) {
 	t.Parallel()
 	testCases := []utils.GenericTestCase[
 		utils.ThreeArgumentTestCasesArgsType[map[int]string, int, string], map[int]string]{

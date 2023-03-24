@@ -1,0 +1,4 @@
+package maps
+
+// Add adds the key value pair to the HashableMap.
+// Modifies the map in place, does not return a new HashableMap.

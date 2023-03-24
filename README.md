@@ -33,7 +33,6 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Keys
     - [x] Values
 
-
 - [ ] HashableMap
     - [ ] FromHashableMap
     - [ ] ToHashableMap
@@ -48,15 +47,15 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [ ] Set
     - [x] FromSet
     - [x] ToSet
-    - [ ] Add
-    - [ ] Contains
-    - [ ] Difference
-    - [ ] Intersection
-    - [ ] Union
-    - [ ] Remove
-    - [ ] IsSubsetOf
-    - [ ] IsSupersetOf
-    - [ ] Size
+    - [-] Add
+    - [-] AddAll
+    - [-] Contains
+    - [-] Difference
+    - [-] Intersection
+    - [-] Union
+    - [-] Remove
+    - [-] IsSubsetOf
+    - [-] IsSupersetOf
 
 - [ ] HashableSet
     - [ ] FromHashableSet
