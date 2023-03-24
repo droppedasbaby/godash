@@ -83,7 +83,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Filter
     - [-] ForEach
     - [ ] Head
-    - [-] Map
+    - [x] Map
     - [ ] Range
     - [ ] RangeRight
     - [-] Reduce
