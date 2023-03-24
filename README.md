@@ -37,7 +37,7 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [ ] HashableMap
     - [ ] FromHashableMap
     - [ ] ToHashableMap
-    - [ ] Add - Modifies original DS, does not return a new on
+    - [ ] Add - Modifies original DS, does not return a new one
     - [ ] AddAll - Modifies original DS, does not return a new one
     - [ ] Remove - Modifies original DS, does not return a new one
     - [ ] RemoveAll - Modifies original DS, does not return a new one
@@ -80,7 +80,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] DropWhile
     - [ ] DropRight
     - [ ] DropRightWhile
-    - [-] Filter
+    - [x] Filter
     - [-] ForEach
     - [ ] Head
     - [-] Map
