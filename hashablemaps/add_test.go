@@ -1,1 +1,41 @@
 package hashablemaps_test
+
+import (
+	"testing"
+
+	"godash/hashablemaps"
+	"godash/utils"
+)
+
+func TestAdd(t *testing.T) {
+	t.Parallel()
+
+	testCases := []utils.GenericTestCase[
+		utils.TwoArgumentTestCasesArgsType[hashablemaps.HashableMap[TestHashable], TestHashable],
+		hashablemaps.HashableMap[TestHashable]]{
+		{
+			Name: "Add single element to empty HashableMap",
+			Args: utils.TwoArgumentTestCasesArgsType[hashablemaps.HashableMap[TestHashable], TestHashable]{
+				A: hashablemaps.HashableMap[TestHashable]{}, B: TestHashable{"a"}},
+			Want: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}},
+		},
+		{
+			Name: "Add single element to non-empty HashableMap",
+			Args: utils.TwoArgumentTestCasesArgsType[hashablemaps.HashableMap[TestHashable], TestHashable]{
+				A: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}}, B: TestHashable{"b"}},
+			Want: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}, "b": TestHashable{"b"}},
+		},
+		{
+			Name: "Add duplicate element to HashableMap",
+			Args: utils.TwoArgumentTestCasesArgsType[hashablemaps.HashableMap[TestHashable], TestHashable]{
+				A: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}}, B: TestHashable{"a"}},
+			Want: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}},
+		},
+	}
+
+	utils.RunTwoArgumentTestCases(t, "Add()",
+		func(m hashablemaps.HashableMap[TestHashable], v TestHashable) hashablemaps.HashableMap[TestHashable] {
+			hashablemaps.Add(&m, v)
+			return m
+		}, testCases)
+}

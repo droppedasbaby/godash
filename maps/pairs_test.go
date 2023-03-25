@@ -1,6 +1,7 @@
 package maps_test
 
 import (
+	"sort"
 	"testing"
 
 	"godash"
@@ -27,7 +28,11 @@ func TestFromMap(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "FromMap()", maps.FromMap[string, int], testCases)
+	utils.RunSingleArgumentTestCases(t, "FromMap()", func(m map[string]int) []godash.Pair[string, int] {
+		pairs := maps.FromMap(m)
+		sort.Slice(pairs, func(i, j int) bool { return pairs[i].First < pairs[j].First })
+		return pairs
+	}, testCases)
 }
 
 func TestFromMap_WithIntKeys(t *testing.T) {
@@ -50,7 +55,11 @@ func TestFromMap_WithIntKeys(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "FromMapWithIntKeys", maps.FromMap[int, string], testCases)
+	utils.RunSingleArgumentTestCases(t, "FromMap()", func(m map[int]string) []godash.Pair[int, string] {
+		pairs := maps.FromMap(m)
+		sort.Slice(pairs, func(i, j int) bool { return pairs[i].First < pairs[j].First })
+		return pairs
+	}, testCases)
 }
 
 func TestToMap(t *testing.T) {
@@ -99,7 +108,7 @@ func TestToMap_WithIntKeys(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "ToMapWithIntKeys", func(pairs []godash.Pair[int, string]) map[int]string {
+	utils.RunSingleArgumentTestCases(t, "ToMap()", func(pairs []godash.Pair[int, string]) map[int]string {
 		return maps.ToMap(pairs...)
 	}, testCases)
 }

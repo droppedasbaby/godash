@@ -23,7 +23,7 @@ func TestValues(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "ValuesWithIntKeys()", func(m map[string]int) []int {
+	utils.RunSingleArgumentTestCases(t, "Values()", func(m map[string]int) []int {
 		vals := maps.Values[string, int](m)
 		sort.Ints(vals)
 		return vals
@@ -45,7 +45,7 @@ func TestValues_WithIntKeys(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "ValuesWithIntKeys()", func(m map[int]string) []string {
+	utils.RunSingleArgumentTestCases(t, "Values()", func(m map[int]string) []string {
 		vals := maps.Values[int, string](m)
 		sort.Strings(vals)
 		return vals
