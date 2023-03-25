@@ -33,30 +33,31 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToMap
     - [x] Values
 
-- [ ] HashableMap
-    - [ ] Add - Modifies original DS, does not return a new one
-    - [ ] AddAll - Modifies original DS, does not return a new one
-    - [ ] Contains
-    - [ ] FromHashableMap
-    - [ ] Keys
-    - [ ] Remove - Modifies original DS, does not return a new one
-    - [ ] RemoveAll - Modifies original DS, does not return a new one
-    - [ ] ToHashableMap
-    - [ ] Values
+- [-] HashableMap
+    - [-] Add - Modifies original DS, does not return a new one
+    - [-] AddAll - Modifies original DS, does not return a new one
+    - [-] Contains
+    - [-] FromHashableMap
+    - [-] Keys
+    - [-] Remove - Modifies original DS, does not return a new one
+    - [-] RemoveAll - Modifies original DS, does not return a new one
+    - [-] ToHashableMap
+    - [-] Values
 
-- [ ] Set
+- [x] Set
     - [x] Add - Modifies original DS, does not return a new one
     - [x] AddAll - Modifies original DS, does not return a new one
     - [x] Contains
     - [x] Difference
     - [x] FromSet
+    - [x] Get
     - [x] Intersection
     - [x] IsSubsetOf
     - [x] IsSupersetOf
     - [x] Remove - Modifies original DS, does not return a new one
     - [x] RemoveAll - Modifies original DS, does not return a new one
     - [x] ToSet
-    - [-] Union
+    - [x] Union
 
 - [ ] HashableSet
     - [ ] Add - Modifies original DS, does not return a new one
@@ -64,6 +65,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] Contains
     - [ ] Difference
     - [ ] FromHashableSet
+    - [ ] Get
     - [ ] Intersection
     - [ ] IsSubsetOf
     - [ ] IsSupersetOf
