@@ -54,7 +54,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] IsSubsetOf
     - [x] IsSupersetOf
     - [x] Remove - Modifies original DS, does not return a new one
-    - [-] RemoveAll - Modifies original DS, does not return a new one
+    - [x] RemoveAll - Modifies original DS, does not return a new one
     - [x] ToSet
     - [-] Union
 
