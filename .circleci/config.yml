@@ -15,4 +15,4 @@ jobs:
           command: golangci-lint run
       - run:
           name: "Testing the code"
-          command: go test ./... -v -cover
+          command: go test ./... -cover
