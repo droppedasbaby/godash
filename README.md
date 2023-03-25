@@ -33,16 +33,16 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToMap
     - [x] Values
 
-- [-] HashableMap
-    - [-] Add - Modifies original DS, does not return a new one
-    - [-] AddAll - Modifies original DS, does not return a new one
-    - [-] Contains
-    - [-] FromHashableMap
-    - [-] Keys
-    - [-] Remove - Modifies original DS, does not return a new one
-    - [-] RemoveAll - Modifies original DS, does not return a new one
-    - [-] ToHashableMap
-    - [-] Values
+- [x] HashableMap
+    - [x] Add - Modifies original DS, does not return a new one
+    - [x] AddAll - Modifies original DS, does not return a new one
+    - [x] Contains
+    - [x] FromHashableMap
+    - [x] Keys
+    - [x] Remove - Modifies original DS, does not return a new one
+    - [x] RemoveAll - Modifies original DS, does not return a new one
+    - [x] ToHashableMap
+    - [x] Values
 
 - [x] Set
     - [x] Add - Modifies original DS, does not return a new one
