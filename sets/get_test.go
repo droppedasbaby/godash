@@ -1,9 +1,10 @@
 package sets_test
 
 import (
+	"testing"
+
 	"godash/sets"
 	"godash/utils"
-	"testing"
 )
 
 func TestGet_WithInt(t *testing.T) {
@@ -32,9 +33,7 @@ func TestGet_WithInt(t *testing.T) {
 		},
 	}
 
-	utils.RunTwoArgumentTestCases(t, "Get()", func(s sets.Set[int], e int) *int {
-		return sets.Get(s, e)
-	}, testCases)
+	utils.RunTwoArgumentTestCases(t, "Get()", sets.Get[int], testCases)
 }
 
 func TestGet_WithString(t *testing.T) {
@@ -63,7 +62,5 @@ func TestGet_WithString(t *testing.T) {
 		},
 	}
 
-	utils.RunTwoArgumentTestCases(t, "Get()", func(s sets.Set[string], e string) *string {
-		return sets.Get(s, e)
-	}, testCases)
+	utils.RunTwoArgumentTestCases(t, "Get()", sets.Get[string], testCases)
 }
