@@ -23,94 +23,96 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Testing
 
 - [x] Maps
-    - [x] FromMap
-    - [x] ToMap
     - [x] Add - Modifies original DS, does not return a new one
     - [x] AddAll - Modifies original DS, does not return a new one
+    - [x] Contains
+    - [x] FromMap
+    - [x] Keys
     - [x] Remove - Modifies original DS, does not return a new one
     - [x] RemoveAll - Modifies original DS, does not return a new one 
-    - [x] Contains
-    - [x] Keys
+    - [x] ToMap
     - [x] Values
 
 - [ ] HashableMap
-    - [ ] FromHashableMap
-    - [ ] ToHashableMap
     - [ ] Add - Modifies original DS, does not return a new one
     - [ ] AddAll - Modifies original DS, does not return a new one
+    - [ ] Contains
+    - [ ] FromHashableMap
+    - [ ] Keys
     - [ ] Remove - Modifies original DS, does not return a new one
     - [ ] RemoveAll - Modifies original DS, does not return a new one
-    - [ ] Contains
-    - [ ] Keys
+    - [ ] ToHashableMap
     - [ ] Values
 
 - [ ] Set
-    - [x] FromSet
-    - [x] ToSet
     - [x] Add - Modifies original DS, does not return a new one
     - [x] AddAll - Modifies original DS, does not return a new one
     - [x] Contains
     - [x] Difference
+    - [x] FromSet
     - [x] Intersection
-    - [-] Union
-    - [x] Remove - Modifies original DS, does not return a new one
-    - [ ] RemoveAll - Modifies original DS, does not return a new one
     - [x] IsSubsetOf
     - [x] IsSupersetOf
+    - [x] Remove - Modifies original DS, does not return a new one
+    - [-] RemoveAll - Modifies original DS, does not return a new one
+    - [x] ToSet
+    - [-] Union
 
 - [ ] HashableSet
-    - [ ] FromHashableSet
-    - [ ] ToHashableSet
-    - [ ] Add
+    - [ ] Add - Modifies original DS, does not return a new one
+    - [ ] AddAll - Modifies original DS, does not return a new one
     - [ ] Contains
     - [ ] Difference
+    - [ ] FromHashableSet
     - [ ] Intersection
-    - [ ] Union
-    - [ ] Remove
     - [ ] IsSubsetOf
     - [ ] IsSupersetOf
+    - [ ] Remove - Modifies original DS, does not return a new one
+    - [ ] RemoveAll - Modifies original DS, does not return a new one
     - [ ] Size
+    - [ ] ToHashableSet
+    - [ ] Union
 
 - [ ] Slices/Arrays 
     - [ ] Chunk
     - [ ] Compact
     - [ ] Contains
     - [ ] ContainsWith
+    - [ ] Difference
+    - [ ] DifferenceWith
     - [ ] Drop
-    - [ ] DropWhile
     - [ ] DropRight
     - [ ] DropRightWhile
+    - [ ] DropWhile
     - [x] Filter
+    - [ ] FlatMap
+    - [ ] Flatten
     - [x] ForEach
     - [ ] Head
+    - [ ] Intersection
+    - [ ] IntersectionWith
     - [x] Map
     - [ ] Range
     - [ ] RangeRight
     - [x] Reduce
     - [ ] Tail
     - [ ] Take
-    - [ ] TakeWhile
     - [ ] TakeRight
     - [ ] TakeRightWhile
-    - [ ] Zip
-    - [ ] Unzip
-    - [ ] ZipWithIndex
-    - [ ] Difference
-    - [ ] DifferenceWith
-    - [ ] Intersection
-    - [ ] IntersectionWith
+    - [ ] TakeWhile
     - [ ] Union
     - [ ] UnionWith
-    - [ ] FlatMap
-    - [ ] Flatten
+    - [ ] Unzip
+    - [ ] Zip
+    - [ ] ZipWithIndex
 
 - [ ] Linked List
     - [ ] Append
+    - [ ] Contains
+    - [ ] FromSlice
+    - [ ] Get
     - [ ] Insert
     - [ ] Remove
     - [ ] RemoveAt
-    - [ ] Contains
-    - [ ] Get
     - [ ] Size
     - [ ] ToSlice
-    - [ ] FromSlice
