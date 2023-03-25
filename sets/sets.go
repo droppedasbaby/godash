@@ -1,6 +1,6 @@
 package sets
 
-// Set is a sets of values. Just a wrapper around a map where the keys are the sets elements and the values are always
+// Set is a set of values. Just a wrapper around a map where the keys are the sets elements and the values are always
 // true.
 type Set[T comparable] map[T]bool
 

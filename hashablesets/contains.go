@@ -1,3 +1,3 @@
 package hashablesets
 
-// Contains returns true if the sets contains the element.
+// Contains returns true if the HashableSet contains the element.
