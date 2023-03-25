@@ -50,6 +50,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Contains
     - [x] Difference
     - [x] FromSet
+    - [x] Get
     - [x] Intersection
     - [x] IsSubsetOf
     - [x] IsSupersetOf
@@ -64,6 +65,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] Contains
     - [ ] Difference
     - [ ] FromHashableSet
+    - [ ] Get
     - [ ] Intersection
     - [ ] IsSubsetOf
     - [ ] IsSupersetOf
