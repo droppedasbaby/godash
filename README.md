@@ -47,15 +47,16 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [ ] Set
     - [x] FromSet
     - [x] ToSet
-    - [-] Add
-    - [-] AddAll
-    - [-] Contains
-    - [-] Difference
-    - [-] Intersection
+    - [x] Add - Modifies original DS, does not return a new one
+    - [x] AddAll - Modifies original DS, does not return a new one
+    - [x] Contains
+    - [x] Difference
+    - [x] Intersection
     - [-] Union
-    - [-] Remove
-    - [-] IsSubsetOf
-    - [-] IsSupersetOf
+    - [x] Remove - Modifies original DS, does not return a new one
+    - [ ] RemoveAll - Modifies original DS, does not return a new one
+    - [x] IsSubsetOf
+    - [x] IsSupersetOf
 
 - [ ] HashableSet
     - [ ] FromHashableSet
