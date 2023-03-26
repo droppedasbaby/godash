@@ -1,4 +1,11 @@
 package hashablesets
 
+import "godash"
+
 // RemoveAll removes all elements passed as arguments from the HashableSet.
 // Modifies the set in place, does not return a new set.
+func RemoveAll[H godash.Hashable](s *HashableSet[H], elements ...H) {
+	for _, e := range elements {
+		delete(*s, e.Hash())
+	}
+}

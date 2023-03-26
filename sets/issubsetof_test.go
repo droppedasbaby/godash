@@ -52,6 +52,14 @@ func TestIsSubsetOf_WithInt(t *testing.T) {
 			},
 			Want: false,
 		},
+		{
+			Name: "Set is a subset of itself",
+			Args: utils.TwoArgumentTestCasesArgsType[
+				sets.Set[int], sets.Set[int]]{
+				A: sets.Set[int]{1: true, 2: true}, B: sets.Set[int]{1: true, 2: true},
+			},
+			Want: true,
+		},
 	}
 
 	utils.RunTwoArgumentTestCases(t, "IsSubsetOf()", sets.IsSubsetOf[int], testCases)
