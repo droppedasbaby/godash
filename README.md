@@ -63,15 +63,15 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] AddAll - Modifies original DS, does not return a new one
     - [x] Contains
     - [x] Difference
-    - [ ] FromHashableSet
-    - [ ] Intersection
-    - [ ] IsSubsetOf
-    - [ ] IsSupersetOf
-    - [ ] Remove - Modifies original DS, does not return a new one
-    - [ ] RemoveAll - Modifies original DS, does not return a new one
-    - [ ] Size
-    - [ ] ToHashableSet
-    - [ ] Union
+    - [x] FromHashableSet
+    - [x] Intersection
+    - [x] IsSubsetOf
+    - [x] IsSupersetOf
+    - [x] Remove - Modifies original DS, does not return a new one
+    - [x] RemoveAll - Modifies original DS, does not return a new one
+    - [x] Size
+    - [x] ToHashableSet
+    - [x] Union
 
 - [ ] Slices/Arrays 
     - [ ] Chunk
