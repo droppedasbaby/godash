@@ -58,7 +58,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToSet
     - [x] Union
 
-- [ ] HashableSet
+- [x] HashableSet
     - [x] Add - Modifies original DS, does not return a new one
     - [x] AddAll - Modifies original DS, does not return a new one
     - [x] Contains
