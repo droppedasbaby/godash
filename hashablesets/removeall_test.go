@@ -1,9 +1,10 @@
 package hashablesets_test
 
 import (
+	"testing"
+
 	"godash/hashablesets"
 	"godash/utils"
-	"testing"
 )
 
 func TestRemoveAll(t *testing.T) {
