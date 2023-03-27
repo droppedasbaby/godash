@@ -74,7 +74,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Union
 
 - [ ] Slices/Arrays 
-    - [ ] Chunk
+    - [x] Chunk
     - [ ] Compact
     - [ ] Contains
     - [ ] ContainsWith
