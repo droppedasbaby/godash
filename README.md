@@ -107,12 +107,16 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] ZipWithIndex
 
 - [ ] Linked List
-    - [ ] Append
+    - [x] AddFirst
+    - [x] AddLast
+    - [ ] Clear
     - [ ] Contains
-    - [ ] FromSlice
+    - [x] FromSlice
     - [ ] Get
     - [ ] Insert
+    - [ ] IsEmpty
+    - [ ] Length
     - [ ] Remove
-    - [ ] RemoveAt
+    - [ ] Reverse
     - [ ] Size
-    - [ ] ToSlice
+    - [x] ToSlice
