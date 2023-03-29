@@ -6,11 +6,12 @@ func Insert[T any](ll *LinkedList[T], index int, n *Node[T]) {
 		panic("index out of range")
 	}
 
-	if index == 0 {
+	switch index {
+	case 0:
 		AddFirst(ll, n)
-	} else if index == ll.Length {
+	case ll.Length:
 		AddLast(ll, n)
-	} else {
+	default:
 		prev := Get(ll, index-1)
 		next := prev.Next
 		prev.Next = n

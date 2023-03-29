@@ -6,11 +6,12 @@ func Remove[T any](ll *LinkedList[T], index int) {
 		panic("index out of range")
 	}
 
-	if index == 0 {
+	switch index {
+	case 0:
 		ll.Head = ll.Head.Next
-	} else if index == ll.Length-1 {
+	case ll.Length - 1:
 		ll.Tail = ll.Tail.Prev
-	} else {
+	default:
 		prev := Get(ll, index-1)
 		next := prev.Next.Next
 		prev.Next = next
