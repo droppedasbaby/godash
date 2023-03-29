@@ -48,19 +48,15 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Add - Modifies original DS, does not return a new one
     - [x] AddAll - Modifies original DS, does not return a new one
     - [x] Contains
-    - [ ] ContainsWith
     - [x] Difference
-    - [ ] DifferenceWith
     - [x] FromSet
     - [x] Intersection
-    - [ ] IntersectionWith
     - [x] IsSubsetOf
     - [x] IsSupersetOf
     - [x] Remove - Modifies original DS, does not return a new one
     - [x] RemoveAll - Modifies original DS, does not return a new one
     - [x] ToSet
     - [x] Union
-    - [ ] UnionWith
 
 - [x] HashableSet
     - [x] Add - Modifies original DS, does not return a new one
@@ -81,9 +77,11 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Chunk
     - [-] Compact
     - [-] Contains
-    - [ ] ContainsWith
+    - [-] ContainsHashable
+    - [-] ContainsWith
     - [-] Difference
-    - [ ] DifferenceWith
+    - [-] DifferenceHashable
+    - [-] DifferenceWith
     - [ ] Drop
     - [ ] DropRight
     - [ ] DropRightWhile
@@ -113,14 +111,10 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [ ] Linked List
     - [x] AddFirst
     - [x] AddLast
-    - [ ] Clear
-    - [ ] Contains
+    - [-] Clear
+    - [-] Contains
     - [x] FromSlice
-    - [ ] Get
-    - [ ] Insert
-    - [ ] IsEmpty
-    - [ ] Length
-    - [ ] Remove
-    - [ ] Reverse
-    - [ ] Size
+    - [-] Get
+    - [-] Insert
+    - [-] Remove
     - [x] ToSlice

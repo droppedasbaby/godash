@@ -9,8 +9,9 @@ type Node[T any] struct {
 
 // LinkedList is a doubly linked list.
 type LinkedList[T any] struct {
-	Head *Node[T]
-	Tail *Node[T]
+	Head   *Node[T]
+	Tail   *Node[T]
+	Length int
 }
 
 // FromSlice returns a linked list from a slice/array.

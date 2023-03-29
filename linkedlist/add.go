@@ -10,6 +10,7 @@ func AddFirst[T any](ll *LinkedList[T], n *Node[T]) {
 		n.Next = ll.Head
 		ll.Head = n
 	}
+	ll.Length++
 }
 
 // AddLast adds a node to the end of the linked list.
@@ -22,4 +23,5 @@ func AddLast[T any](ll *LinkedList[T], n *Node[T]) {
 		n.Prev = ll.Tail
 		ll.Tail = n
 	}
+	ll.Length++
 }
