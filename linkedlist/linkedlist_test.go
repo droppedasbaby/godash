@@ -1,6 +1,7 @@
 package linkedlist_test
 
 import (
+	"reflect"
 	"testing"
 
 	"godash/linkedlist"
@@ -22,10 +23,10 @@ func TestFromSlice(t *testing.T) {
 		{
 			Name: "From single element slice",
 			Args: utils.SingleArgumentTestCasesArgsType[[]int]{A: single},
-			Want: linkedlist.LinkedList[int]{
-				Head: &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil},
-				Tail: &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil},
-			},
+			Want: func() linkedlist.LinkedList[int] {
+				node := &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil}
+				return linkedlist.LinkedList[int]{Head: node, Tail: node}
+			}(),
 		},
 		{
 			Name: "From multiple elements slice",
@@ -44,7 +45,17 @@ func TestFromSlice(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "FromSlice()", linkedlist.FromSlice[int], testCases)
+	for _, tc := range testCases {
+		t.Run(tc.Name, func(t *testing.T) {
+			got := linkedlist.FromSlice[int](tc.Args.A)
+			gotSlice := linkedlist.ToSlice[int](got)
+			wantSlice := linkedlist.ToSlice[int](tc.Want)
+
+			if !reflect.DeepEqual(gotSlice, wantSlice) {
+				t.Errorf("FromSlice() = %v, want %v", gotSlice, wantSlice)
+			}
+		})
+	}
 }
 
 func TestToSlice(t *testing.T) {
