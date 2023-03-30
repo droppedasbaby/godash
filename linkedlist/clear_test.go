@@ -1,9 +1,10 @@
 package linkedlist_test
 
 import (
+	"testing"
+
 	"godash/linkedlist"
 	"godash/utils"
-	"testing"
 )
 
 func TestClear(t *testing.T) {

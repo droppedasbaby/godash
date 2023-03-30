@@ -111,8 +111,8 @@ that do not have tests are marked with a `-` instead of a `x`.
 - [-] Linked List
     - [x] AddFirst
     - [x] AddLast
-    - [-] Clear
-    - [-] Contains
+    - [x] Clear
+    - [x] Contains
     - [x] FromSlice
     - [-] Get
     - [-] Insert

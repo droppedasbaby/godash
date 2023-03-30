@@ -45,8 +45,10 @@ func TestFromSlice(t *testing.T) {
 		},
 	}
 
-	for _, tc := range testCases {
+	for _, testCase := range testCases {
+		tc := testCase
 		t.Run(tc.Name, func(t *testing.T) {
+			t.Parallel()
 			got := linkedlist.FromSlice[int](tc.Args.A)
 			gotSlice := linkedlist.ToSlice[int](got)
 			wantSlice := linkedlist.ToSlice[int](tc.Want)
