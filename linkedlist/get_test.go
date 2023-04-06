@@ -1,9 +1,10 @@
 package linkedlist_test
 
 import (
+	"testing"
+
 	"godash/linkedlist"
 	"godash/utils"
-	"testing"
 )
 
 func TestGet(t *testing.T) {
@@ -76,5 +77,4 @@ func TestGet(t *testing.T) {
 		func(ll *linkedlist.LinkedList[customType], index int) *linkedlist.Node[customType] {
 			return linkedlist.Get[customType](ll, index)
 		}, testCases)
-
 }

@@ -114,7 +114,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Clear
     - [x] Contains
     - [x] FromSlice
-    - [-] Get
-    - [-] Insert
+    - [x] Get
+    - [x] Insert
     - [-] Remove
     - [x] ToSlice
