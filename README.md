@@ -113,6 +113,6 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Contains
     - [x] FromSlice
     - [x] Get
-    - [-] Insert
+    - [x] Insert
     - [x] Remove
     - [x] ToSlice
