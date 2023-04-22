@@ -1,9 +1,10 @@
 package slices_test
 
 import (
+	"testing"
+
 	"godash/slices"
 	"godash/utils"
-	"testing"
 )
 
 func TestContains(t *testing.T) {

@@ -1,9 +1,10 @@
 package slices_test
 
 import (
+	"testing"
+
 	"godash/slices"
 	"godash/utils"
-	"testing"
 )
 
 func TestCompact(t *testing.T) {
