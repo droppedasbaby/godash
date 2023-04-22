@@ -1,9 +1,10 @@
 package linkedlist_test
 
 import (
+	"testing"
+
 	"godash/linkedlist"
 	"godash/utils"
-	"testing"
 )
 
 func TestRemoveInt(t *testing.T) {
@@ -186,6 +187,6 @@ func TestRemovePrevNextPointers(t *testing.T) {
 
 	utils.RunTwoArgumentTestCases(t, "Remove()", func(ll linkedlist.LinkedList[string], index int) []prevNext {
 		linkedlist.Remove(&ll, index)
-		return GetPrevNext(&ll)
+		return getPrevNext(&ll)
 	}, testCases)
 }
