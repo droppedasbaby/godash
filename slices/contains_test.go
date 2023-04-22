@@ -73,6 +73,7 @@ func TestContainsWith(t *testing.T) {
 				B: "d",
 				C: func(a, b string) bool { return a == b },
 			},
+			Want: false,
 		},
 	}
 
@@ -107,6 +108,7 @@ func TestContainsHashable(t *testing.T) {
 				A: []testHashable{},
 				B: testHashable{Value: "d"},
 			},
+			Want: false,
 		},
 	}
 
