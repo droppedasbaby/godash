@@ -9,8 +9,14 @@ func Remove[T any](ll *LinkedList[T], index int) {
 	switch index {
 	case 0:
 		ll.Head = ll.Head.Next
+		if ll.Head != nil {
+			ll.Head.Prev = nil
+		}
 	case ll.Length - 1:
 		ll.Tail = ll.Tail.Prev
+		if ll.Tail != nil {
+			ll.Tail.Next = nil
+		}
 	default:
 		prev := Get(ll, index-1)
 		next := prev.Next.Next
