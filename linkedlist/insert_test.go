@@ -58,7 +58,7 @@ func TestInsert(t *testing.T) {
 		}, testCases)
 }
 
-func TestInsertTestStruct(t *testing.T) {
+func TestInsert_TestStruct(t *testing.T) {
 	t.Parallel()
 
 	type testStruct struct {

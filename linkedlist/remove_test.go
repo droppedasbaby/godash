@@ -141,7 +141,7 @@ func TestRemovePrevNextPointers(t *testing.T) {
 		utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int],
 		[]prevNext]{
 		{
-			Name: "remove from the middle",
+			Name: "Remove from the middle",
 			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
 				A: linkedlist.FromSlice([]string{"a", "b", "c", "d", "e"}),
 				B: 2,
@@ -154,7 +154,7 @@ func TestRemovePrevNextPointers(t *testing.T) {
 			},
 		},
 		{
-			Name: "remove from the beginning",
+			Name: "Remove from the beginning",
 			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
 				A: linkedlist.FromSlice([]string{"a", "b", "c"}),
 				B: 0,
@@ -165,7 +165,7 @@ func TestRemovePrevNextPointers(t *testing.T) {
 			},
 		},
 		{
-			Name: "remove from the end",
+			Name: "Remove from the end",
 			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
 				A: linkedlist.FromSlice([]string{"a", "b", "c"}),
 				B: 2,
@@ -176,7 +176,7 @@ func TestRemovePrevNextPointers(t *testing.T) {
 			},
 		},
 		{
-			Name: "remove single element",
+			Name: "Remove single element",
 			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
 				A: linkedlist.FromSlice([]string{"a"}),
 				B: 0,
@@ -188,5 +188,49 @@ func TestRemovePrevNextPointers(t *testing.T) {
 	utils.RunTwoArgumentTestCases(t, "Remove()", func(ll linkedlist.LinkedList[string], index int) []prevNext {
 		linkedlist.Remove(&ll, index)
 		return getPrevNext(&ll)
+	}, testCases)
+}
+
+func TestRemovePanics(t *testing.T) {
+	t.Parallel()
+
+	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int], bool]{
+		{
+			Name: "Remove negative index",
+			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
+				A: linkedlist.FromSlice([]string{"a", "b", "c"}),
+				B: -1,
+			},
+			Want: true,
+		},
+		{
+			Name: "Remove index out of range",
+			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
+				A: linkedlist.FromSlice([]string{"a", "b", "c"}),
+				B: 3,
+			},
+			Want: true,
+		},
+		{
+			Name: "Remove from empty list",
+			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
+				A: linkedlist.FromSlice([]string{}),
+				B: 0,
+			},
+			Want: true,
+		},
+		{
+			Name: "Remove from a valid list",
+			Args: utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int]{
+				A: linkedlist.FromSlice([]string{"a", "b", "c"}),
+				B: 1,
+			},
+			Want: false,
+		},
+	}
+	utils.RunTwoArgumentTestCases(t, "Remove()", func(ll linkedlist.LinkedList[string], index int) bool {
+		return utils.Panics(func() {
+			linkedlist.Remove(&ll, index)
+		})
 	}, testCases)
 }
