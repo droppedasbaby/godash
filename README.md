@@ -9,7 +9,7 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 
 ## To-Do:
 
-Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function 
+Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function
 that do not have tests are marked with a `-` instead of a `x`.
 
 - [x] Conditions
@@ -29,7 +29,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] FromMap
     - [x] Keys
     - [x] Remove - Modifies original DS, does not return a new one
-    - [x] RemoveAll - Modifies original DS, does not return a new one 
+    - [x] RemoveAll - Modifies original DS, does not return a new one
     - [x] ToMap
     - [x] Values
 
@@ -73,7 +73,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToHashableSet
     - [x] Union
 
-- [ ] Slices/Arrays 
+- [ ] Slices/Arrays
     - [x] Chunk
     - [-] Compact
     - [-] Contains
@@ -104,9 +104,9 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] TakeWhile
     - [ ] Union
     - [ ] UnionWith
-    - [ ] Unzip
-    - [ ] Zip
-    - [ ] ZipWithIndex
+    - [-] Unzip
+    - [-] Zip
+    - [-] ZipWithIndex
 
 - [-] Linked List
     - [x] AddFirst
