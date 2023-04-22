@@ -114,7 +114,7 @@ func AddWantToTestCases[A any, W any, WS []W](
 	testCases := make([]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS], len(data))
 
 	if len(wants) != len(data) {
-		return NewResultWithError(testCases, ErrTestCasesAndWantsLenDiff)
+		return *NewResultWithError(testCases, ErrTestCasesAndWantsLenDiff)
 	}
 
 	for i, element := range data {
@@ -128,5 +128,5 @@ func AddWantToTestCases[A any, W any, WS []W](
 		}
 	}
 
-	return NewResultWithError(testCases, nil)
+	return *NewResultWithError(testCases, nil)
 }
