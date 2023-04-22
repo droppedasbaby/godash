@@ -87,23 +87,21 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [ ] DropRightWhile
     - [ ] DropWhile
     - [x] Filter
-    - [ ] FlatMap
-    - [ ] Flatten
+    - [-] Flatten
     - [x] ForEach
-    - [ ] Head
-    - [ ] Intersection
-    - [ ] IntersectionWith
+    - [-] Head
+    - [-] Intersection
+    - [-] IntersectionHashable
+    - [-] IntersectionWith
     - [x] Map
-    - [ ] Range
-    - [ ] RangeRight
-    - [x] Reduce
-    - [ ] Tail
+    - [-] Tail
     - [ ] Take
     - [ ] TakeRight
     - [ ] TakeRightWhile
     - [ ] TakeWhile
-    - [ ] Union
-    - [ ] UnionWith
+    - [-] Union
+    - [-] UnionHashable
+    - [-] UnionWith
     - [-] Unzip
     - [-] Zip
     - [-] ZipWithIndex
