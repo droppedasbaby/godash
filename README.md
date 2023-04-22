@@ -75,10 +75,10 @@ that do not have tests are marked with a `-` instead of a `x`.
 
 - [ ] Slices/Arrays
     - [x] Chunk
-    - [-] Compact
-    - [-] Contains
-    - [-] ContainsHashable
-    - [-] ContainsWith
+    - [x] Compact
+    - [x] Contains
+    - [x] ContainsHashable
+    - [x] ContainsWith
     - [-] Difference
     - [-] DifferenceHashable
     - [-] DifferenceWith

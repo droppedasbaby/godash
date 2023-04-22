@@ -2,10 +2,10 @@ package slices
 
 import "godash"
 
-// ContainsWith returns true if the slice contains the value using the provided predicate.
-func ContainsWith[S, C any](s []S, c C, pred func(S, C) bool) bool {
+// Contains returns true if the slice contains the value.
+func Contains[T comparable](s []T, c T) bool {
 	for _, v := range s {
-		if pred(v, c) {
+		if v == c {
 			return true
 		}
 	}
@@ -19,10 +19,10 @@ func ContainsHashable[H godash.Hashable](s []H, c H) bool {
 	})
 }
 
-// Contains returns true if the slice contains the value.
-func Contains[T comparable](s []T, c T) bool {
+// ContainsWith returns true if the slice contains the value using the provided predicate.
+func ContainsWith[S, C any](s []S, c C, pred func(S, C) bool) bool {
 	for _, v := range s {
-		if v == c {
+		if pred(v, c) {
 			return true
 		}
 	}
