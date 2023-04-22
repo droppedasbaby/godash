@@ -106,7 +106,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [-] Zip
     - [-] ZipWithIndex
 
-- [-] Linked List
+- [x] Linked List
     - [x] AddFirst
     - [x] AddLast
     - [x] Clear
