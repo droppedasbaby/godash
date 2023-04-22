@@ -33,9 +33,7 @@ func UnionHashable[T godash.Hashable](a []T, b []T) (c []T) {
 // The predicate p is used to determine whether two elements are equal.
 func UnionWith[T comparable](a []T, b []T, p func(T, T) bool) (c []T) {
 	c = []T{}
-	for _, e := range a {
-		c = append(c, e)
-	}
+	c = append(c, a...)
 	for _, e := range b {
 		if !ContainsWith(c, e, p) {
 			c = append(c, e)
