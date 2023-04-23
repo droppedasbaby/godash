@@ -8,6 +8,7 @@ import (
 
 // DifferenceWith returns the difference between two slices using the provided predicate.
 func DifferenceWith[T any](a, b []T, pred func(T, T) bool) (ret []T) {
+	ret = []T{}
 	for _, v := range a {
 		if !ContainsWith(b, v, pred) {
 			ret = append(ret, v)

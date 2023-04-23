@@ -79,18 +79,18 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Contains
     - [x] ContainsHashable
     - [x] ContainsWith
-    - [-] Difference
-    - [-] DifferenceHashable
-    - [-] DifferenceWith
+    - [x] Difference
+    - [x] DifferenceHashable
+    - [x] DifferenceWith
     - [x] Filter
-    - [-] Flatten
+    - [x] Flatten
     - [x] ForEach
-    - [-] Head
+    - [x] Head // One liner, no tests
     - [-] Intersection
     - [-] IntersectionHashable
     - [-] IntersectionWith
     - [x] Map
-    - [-] Tail
+    - [x] Tail // One liner, no tests
     - [-] Union
     - [-] UnionHashable
     - [-] UnionWith
