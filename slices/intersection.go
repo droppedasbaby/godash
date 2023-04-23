@@ -23,7 +23,7 @@ func Intersection[T comparable](a []T, b []T) (c []T) {
 func IntersectionHashable[T godash.Hashable](a []T, b []T) (c []T) {
 	aSet := hashablesets.ToSet(a)
 	bSet := hashablesets.ToSet(b)
-	cSet := hashablesets.Union(aSet, bSet)
+	cSet := hashablesets.Intersection(aSet, bSet)
 	c = hashablesets.FromSet(cSet)
 
 	return

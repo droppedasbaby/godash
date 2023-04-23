@@ -6,7 +6,7 @@ import "godash"
 func ZipWithIndex[T any](s []T) (pairs []godash.Pair[int, T]) {
 	pairs = []godash.Pair[int, T]{}
 	for i, e := range s {
-		pairs[i] = godash.Pair[int, T]{First: i, Second: e}
+		pairs = append(pairs, godash.Pair[int, T]{First: i, Second: e})
 	}
 	return
 }

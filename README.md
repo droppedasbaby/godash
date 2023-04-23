@@ -86,14 +86,14 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Flatten
     - [x] ForEach
     - [x] Head // One liner, no tests
-    - [-] Intersection
-    - [-] IntersectionHashable
-    - [-] IntersectionWith
+    - [x] Intersection
+    - [x] IntersectionHashable
+    - [x] IntersectionWith
     - [x] Map
     - [x] Tail // One liner, no tests
-    - [-] Union
-    - [-] UnionHashable
-    - [-] UnionWith
+    - [x] Union
+    - [x] UnionHashable
+    - [x] UnionWith
     - [-] Unzip
     - [-] Zip
     - [-] ZipWithIndex

@@ -19,9 +19,12 @@ func Remove[T any](ll *LinkedList[T], index int) {
 		}
 	default:
 		prev := Get(ll, index-1)
+		curr := prev.Next
 		next := prev.Next.Next
 		prev.Next = next
 		next.Prev = prev
+		curr.Next = nil
+		curr.Prev = nil
 	}
 	ll.Length--
 }

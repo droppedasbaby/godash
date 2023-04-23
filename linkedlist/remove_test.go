@@ -7,7 +7,7 @@ import (
 	"godash/utils"
 )
 
-func TestRemoveInt(t *testing.T) {
+func TestRemove_Int(t *testing.T) {
 	t.Parallel()
 	testCases := []utils.GenericTestCase[
 		utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[int], int],
@@ -134,7 +134,7 @@ func TestRemove_TestType(t *testing.T) {
 	}, testCases)
 }
 
-func TestRemovePrevNextPointers(t *testing.T) {
+func TestRemove_PrevNextPointers(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[
@@ -191,7 +191,7 @@ func TestRemovePrevNextPointers(t *testing.T) {
 	}, testCases)
 }
 
-func TestRemovePanics(t *testing.T) {
+func TestRemove_Panics(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[linkedlist.LinkedList[string], int], bool]{
