@@ -94,9 +94,9 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Union
     - [x] UnionHashable
     - [x] UnionWith
-    - [-] Unzip
-    - [-] Zip
-    - [-] ZipWithIndex
+    - [x] Unzip
+    - [x] Zip
+    - [x] ZipWithIndex
 
 - [x] Linked List
     - [x] AddFirst
