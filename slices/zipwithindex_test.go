@@ -1,10 +1,11 @@
 package slices_test
 
 import (
+	"testing"
+
 	"godash"
 	"godash/slices"
 	"godash/utils"
-	"testing"
 )
 
 func TestZipWithIndex(t *testing.T) {

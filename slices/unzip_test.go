@@ -1,11 +1,12 @@
 package slices_test
 
 import (
+	"reflect"
+	"testing"
+
 	"godash"
 	"godash/slices"
 	"godash/utils"
-	"reflect"
-	"testing"
 )
 
 func TestUnzip(t *testing.T) {
@@ -40,10 +41,14 @@ func TestUnzip(t *testing.T) {
 	}
 
 	for _, tc := range testCases {
+		a := tc.Input.A
+		wantA := tc.WantA
+		wantB := tc.WantB
 		t.Run(tc.Name, func(t *testing.T) {
-			gotA, gotB := slices.Unzip[int, string](tc.Input.A)
-			if !reflect.DeepEqual(gotA, tc.WantA) || !reflect.DeepEqual(gotB, tc.WantB) {
-				t.Errorf("Unzip() = (%v, %v), want (%v, %v)", gotA, gotB, tc.WantA, tc.WantB)
+			t.Parallel()
+			gotA, gotB := slices.Unzip[int, string](a)
+			if !reflect.DeepEqual(gotA, wantA) || !reflect.DeepEqual(gotB, wantB) {
+				t.Errorf("Unzip() = (%v, %v), want (%v, %v)", gotA, gotB, wantA, wantB)
 			}
 		})
 	}

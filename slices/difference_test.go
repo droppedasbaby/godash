@@ -1,10 +1,11 @@
 package slices_test
 
 import (
-	"godash/slices"
-	"godash/utils"
 	"sort"
 	"testing"
+
+	"godash/slices"
+	"godash/utils"
 )
 
 func TestDifferenceWith(t *testing.T) {
