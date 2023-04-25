@@ -73,7 +73,7 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToHashableSet
     - [x] Union
 
-- [ ] Slices/Arrays
+- [x] Slices/Arrays
     - [x] Chunk
     - [x] Compact
     - [x] Contains
