@@ -4,8 +4,6 @@ import (
 	"testing"
 
 	"github.com/GrewalAS/godash/maps"
-
-	"github.com/GrewalAS/godash/maps"
 	"github.com/GrewalAS/godash/utils"
 )
 
