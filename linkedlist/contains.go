@@ -1,5 +1,3 @@
-// Package linkedlist provides functionality for creating and manipulating
-// doubly linked lists in Go.
 package linkedlist
 
 // Contains returns true if the linked list contains the element as a value in a node.

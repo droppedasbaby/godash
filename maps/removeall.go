@@ -1,4 +1,3 @@
-// Package maps provides functions for manipulating maps in Go.
 package maps
 
 // RemoveAll removes the keys with the associated values from the map.

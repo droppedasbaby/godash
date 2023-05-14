@@ -1,4 +1,3 @@
-// Package maps provides functions for manipulating maps in Go.
 package maps
 
 // Contains returns true if the map contains the key.

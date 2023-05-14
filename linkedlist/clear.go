@@ -1,5 +1,3 @@
-// Package linkedlist provides functionality for creating and manipulating
-// doubly linked lists in Go.
 package linkedlist
 
 // Clear removes all elements from the linked list. Breaks all connections between nodes and sets the head and tail to

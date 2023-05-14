@@ -1,5 +1,3 @@
-// Package sets provides functionality for creating and manipulating
-// set data structures in Go.
 package sets
 
 // IsSubsetOf checks if a is a subset of b. Returns true if a is a subset of b, false otherwise.

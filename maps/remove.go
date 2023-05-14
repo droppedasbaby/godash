@@ -1,4 +1,3 @@
-// Package maps provides functions for manipulating maps in Go.
 package maps
 
 // Remove removes the key and associated value from the map. Mostly created for consistency with HashableMap.

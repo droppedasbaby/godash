@@ -1,4 +1,3 @@
-// Package maps provides functions for manipulating maps in Go.
 package maps
 
 // Values returns a slice of the values in the map.

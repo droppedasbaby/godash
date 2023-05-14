@@ -1,5 +1,3 @@
-// Package slices offers various utilities for handling and manipulating
-// slice data structures in Go.
 package slices
 
 // Filter returns a new slice containing only the elements of the given slice that satisfy the given predicate.

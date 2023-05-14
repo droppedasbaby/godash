@@ -1,5 +1,3 @@
-// Package linkedlist provides functionality for creating and manipulating
-// doubly linked lists in Go.
 package linkedlist
 
 // Remove removes the element at the specified index. Index 0 is the head of the list.

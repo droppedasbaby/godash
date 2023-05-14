@@ -1,10 +1,8 @@
-// Package maps provides functions for manipulating maps in Go.
 package maps_test
 
 import (
 	"testing"
 
-	"github.com/GrewalAS/godash/maps"
 	"github.com/GrewalAS/godash/utils"
 )
 

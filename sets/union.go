@@ -1,5 +1,3 @@
-// Package sets provides functionality for creating and manipulating
-// set data structures in Go.
 package sets
 
 // Union returns a new set with the elements that are in either set.

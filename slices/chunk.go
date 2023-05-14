@@ -1,5 +1,3 @@
-// Package slices offers various utilities for handling and manipulating
-// slice data structures in Go.
 package slices
 
 // Chunk returns a slice of slices of size n. If the slice cannot be evenly divided into chunks of size n, the last

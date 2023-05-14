@@ -1,5 +1,3 @@
-// Package utils contains a collection of utility functions that can be
-// used throughout the Go application.
 package utils
 
 // Panics returns true if the provided function panics.
