@@ -13,8 +13,16 @@ Only functions that are themselves written and are unit tested are marked as don
 that do not have tests are marked with a `-` instead of a `x`.
 
 - [x] Conditions
+    - [x] ComparableEquality
+    - [x] NumberLessThan
+    - [x] HashableEquality
+    - [x] AnyEquality
 
 - [x] Types
+    - [x] Number
+    - [x] Pair
+    - [x] Hashable
+    - [x] Iterable
 
 - [x] Utils
     - [x] Optional
