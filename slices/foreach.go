@@ -1,3 +1,5 @@
+// Package slices offers various utilities for handling and manipulating
+// slice data structures in Go.
 package slices
 
 // Foreach iterates over the given slice and calls the given function for each element.

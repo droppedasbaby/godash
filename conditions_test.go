@@ -1,3 +1,5 @@
+// Package godash provides a collection of utility functions for Go,
+// inspired by JavaScript's lodash library.
 package godash_test
 
 import (

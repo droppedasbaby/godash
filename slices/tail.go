@@ -1,3 +1,5 @@
+// Package slices offers various utilities for handling and manipulating
+// slice data structures in Go.
 package slices
 
 // Tail returns all elements of the slice except the head. This is the same as the slice from index 1 to the end.

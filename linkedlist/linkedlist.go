@@ -1,3 +1,5 @@
+// Package linkedlist provides functionality for creating and manipulating
+// doubly linked lists in Go.
 package linkedlist
 
 // Node is a node in a doubly linked list.

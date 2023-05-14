@@ -1,3 +1,5 @@
+// Package sets provides functionality for creating and manipulating
+// set data structures in Go.
 package sets
 
 // Remove removes an element from the set.

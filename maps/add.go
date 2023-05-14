@@ -1,3 +1,4 @@
+// Package maps provides functions for manipulating maps in Go.
 package maps
 
 // Add adds the key value pair to the map. Mostly created for consistency with HashableMap.

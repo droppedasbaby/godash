@@ -1,3 +1,5 @@
+// Package slices offers various utilities for handling and manipulating
+// slice data structures in Go.
 package slices
 
 // Reduce applies the function f to each element of the slice and returns a single value.

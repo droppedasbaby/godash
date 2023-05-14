@@ -1,3 +1,5 @@
+// Package sets provides functionality for creating and manipulating
+// set data structures in Go.
 package sets
 
 // Set is a set of values. Just a wrapper around a map where the keys are the sets elements and the values are always
