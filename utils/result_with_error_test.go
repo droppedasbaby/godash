@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"godash/utils"
+	"github.com/GrewalAS/godash/utils"
 )
 
 var (

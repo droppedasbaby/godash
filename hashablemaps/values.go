@@ -1,8 +1,8 @@
 package hashablemaps
 
 import (
-	"godash"
-	"godash/maps"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/maps"
 )
 
 // Values returns a slice of the values in the HashableMap.

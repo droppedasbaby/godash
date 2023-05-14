@@ -1,6 +1,6 @@
 package maps
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // FromMap returns an array of the key value pairs in the map.
 func FromMap[K comparable, V any](m map[K]V) (ps []godash.Pair[K, V]) {

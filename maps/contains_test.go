@@ -3,8 +3,8 @@ package maps_test
 import (
 	"testing"
 
-	"godash/maps"
-	"godash/utils"
+	"github.com/GrewalAS/godash/maps"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestContains_WithStringInt(t *testing.T) {

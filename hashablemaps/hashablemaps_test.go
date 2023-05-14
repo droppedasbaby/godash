@@ -4,9 +4,9 @@ import (
 	"sort"
 	"testing"
 
-	"godash"
-	"godash/hashablemaps"
-	"godash/utils"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/hashablemaps"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestFromHashableMap(t *testing.T) {

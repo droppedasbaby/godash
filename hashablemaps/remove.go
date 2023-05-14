@@ -1,7 +1,7 @@
 package hashablemaps
 
 import (
-	"godash"
+	"github.com/GrewalAS/godash"
 )
 
 // Remove removes the key and associated value from the HashableMap.

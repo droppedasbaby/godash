@@ -1,6 +1,6 @@
 package maps
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // AddAll adds the key value pairs to the map.
 // Modifies the map in place, does not return a new map.

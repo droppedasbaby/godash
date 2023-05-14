@@ -1,7 +1,7 @@
 package slices
 
 import (
-	"godash"
+	"github.com/GrewalAS/godash"
 )
 
 // Zip returns a slice of pairs of elements from the two input slices.

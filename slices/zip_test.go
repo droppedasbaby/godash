@@ -3,9 +3,9 @@ package slices_test
 import (
 	"testing"
 
-	"godash"
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestZip(t *testing.T) {

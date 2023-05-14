@@ -3,7 +3,7 @@ package slices_test
 import (
 	"testing"
 
-	"godash/slices"
+	"github.com/GrewalAS/godash/slices"
 )
 
 func testForeachSumInt(t *testing.T, input []int, want int) {

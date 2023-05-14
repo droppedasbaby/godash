@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"godash"
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestUnzip(t *testing.T) {

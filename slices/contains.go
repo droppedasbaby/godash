@@ -1,6 +1,6 @@
 package slices
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // Contains returns true if the slice contains the value.
 func Contains[T comparable](s []T, c T) bool {

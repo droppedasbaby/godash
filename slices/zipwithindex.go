@@ -1,6 +1,6 @@
 package slices
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // ZipWithIndex returns a slice of pairs of index and the matching element from the input slice.
 func ZipWithIndex[T any](s []T) (pairs []godash.Pair[int, T]) {

@@ -7,6 +7,12 @@ code in a functional way.
 Work in progress, I will be adding more functions as I need them/as I have time.
 Feel free to contribute. You can either contribute by adding functions, by adding tests or by adding documentation.
 
+## Install
+
+```shell
+go get github.com/GrewalAS/godash
+```
+
 ## To-Do:
 
 Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function

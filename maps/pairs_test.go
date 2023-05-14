@@ -4,9 +4,9 @@ import (
 	"sort"
 	"testing"
 
-	"godash"
-	"godash/maps"
-	"godash/utils"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/maps"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestFromMap(t *testing.T) {

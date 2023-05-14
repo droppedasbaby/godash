@@ -3,8 +3,8 @@ package hashablesets_test
 import (
 	"testing"
 
-	"godash/hashablesets"
-	"godash/utils"
+	"github.com/GrewalAS/godash/hashablesets"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestAdd(t *testing.T) {

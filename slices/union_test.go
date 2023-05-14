@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestUnion(t *testing.T) {

@@ -3,8 +3,8 @@ package hashablesets_test
 import (
 	"testing"
 
-	"godash/hashablesets"
-	"godash/utils"
+	"github.com/GrewalAS/godash/hashablesets"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestAddAll(t *testing.T) {
@@ -18,7 +18,7 @@ func TestAddAll(t *testing.T) {
 			Name: "Add multiple elements to an empty set",
 			Args: utils.TwoArgumentTestCasesArgsType[hashablesets.HashableSet[TestHashable], []TestHashable]{
 				A: hashablesets.HashableSet[TestHashable]{},
-				B: []TestHashable{TestHashable{"a"}, TestHashable{"b"}, TestHashable{"c"}},
+				B: []TestHashable{{"a"}, {"b"}, {"c"}},
 			},
 			Want: hashablesets.HashableSet[TestHashable]{
 				"a": TestHashable{"a"},
@@ -30,7 +30,7 @@ func TestAddAll(t *testing.T) {
 			Name: "Add multiple elements to a non-empty set",
 			Args: utils.TwoArgumentTestCasesArgsType[hashablesets.HashableSet[TestHashable], []TestHashable]{
 				A: hashablesets.HashableSet[TestHashable]{"a": TestHashable{"a"}},
-				B: []TestHashable{TestHashable{"b"}, TestHashable{"c"}},
+				B: []TestHashable{{"b"}, {"c"}},
 			},
 			Want: hashablesets.HashableSet[TestHashable]{
 				"a": TestHashable{"a"},
@@ -42,7 +42,7 @@ func TestAddAll(t *testing.T) {
 			Name: "Add duplicate and new elements",
 			Args: utils.TwoArgumentTestCasesArgsType[hashablesets.HashableSet[TestHashable], []TestHashable]{
 				A: hashablesets.HashableSet[TestHashable]{"a": TestHashable{"a"}, "b": TestHashable{"b"}},
-				B: []TestHashable{TestHashable{"b"}, TestHashable{"c"}},
+				B: []TestHashable{{"b"}, {"c"}},
 			},
 			Want: hashablesets.HashableSet[TestHashable]{
 				"a": TestHashable{"a"},

@@ -3,8 +3,8 @@ package hashablemaps_test
 import (
 	"testing"
 
-	"godash/hashablemaps"
-	"godash/utils"
+	"github.com/GrewalAS/godash/hashablemaps"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestAdd(t *testing.T) {

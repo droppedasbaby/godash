@@ -1,8 +1,8 @@
 package hashablemaps
 
 import (
-	"godash"
-	"godash/maps"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/maps"
 )
 
 // Contains returns true if the hashmap contains the key.

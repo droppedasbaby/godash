@@ -1,6 +1,6 @@
 package hashablesets
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // HashableSet is a set of values. Just a wrapper around a map where the keys are the sets elements and the values are
 // always true.

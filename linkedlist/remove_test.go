@@ -3,8 +3,8 @@ package linkedlist_test
 import (
 	"testing"
 
-	"godash/linkedlist"
-	"godash/utils"
+	"github.com/GrewalAS/godash/linkedlist"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestRemove_Int(t *testing.T) {

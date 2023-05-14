@@ -1,6 +1,6 @@
 package linkedlist_test
 
-import "godash/linkedlist"
+import "github.com/GrewalAS/godash/linkedlist"
 
 type prevNext struct {
 	Prev, Next *string

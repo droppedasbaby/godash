@@ -3,7 +3,7 @@ package utils_test
 import (
 	"testing"
 
-	"godash/utils"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestNewOptional(t *testing.T) {

@@ -1,9 +1,9 @@
 package slices
 
 import (
-	"godash"
-	"godash/hashablesets"
-	"godash/sets"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/hashablesets"
+	"github.com/GrewalAS/godash/sets"
 )
 
 // DifferenceWith returns the difference between two slices using the provided predicate.

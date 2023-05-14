@@ -4,8 +4,8 @@ import (
 	"math"
 	"testing"
 
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestReduce_WithInt(t *testing.T) {

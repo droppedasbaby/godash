@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"godash/linkedlist"
-	"godash/utils"
+	"github.com/GrewalAS/godash/linkedlist"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestFromSlice(t *testing.T) {

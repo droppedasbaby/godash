@@ -3,8 +3,8 @@ package godash_test
 import (
 	"testing"
 
-	"godash"
-	"godash/utils"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func runTwoArgumentTestCasesForComparableEquality[T comparable](

@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestFilter_WithInt(t *testing.T) {

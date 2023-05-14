@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"godash/hashablemaps"
-	"godash/utils"
+	"github.com/GrewalAS/godash/hashablemaps"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestValues(t *testing.T) {
@@ -24,7 +24,7 @@ func TestValues(t *testing.T) {
 			Args: utils.SingleArgumentTestCasesArgsType[hashablemaps.HashableMap[TestHashable]]{
 				A: hashablemaps.HashableMap[TestHashable]{"a": TestHashable{"a"}, "b": TestHashable{"b"}},
 			},
-			Want: []TestHashable{TestHashable{"a"}, TestHashable{"b"}},
+			Want: []TestHashable{{"a"}, {"b"}},
 		},
 	}
 

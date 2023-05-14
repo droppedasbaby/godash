@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"godash/slices"
+	"github.com/GrewalAS/godash/slices"
 )
 
 type ResultWithError[V any] struct {

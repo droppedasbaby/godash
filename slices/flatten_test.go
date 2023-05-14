@@ -3,8 +3,8 @@ package slices_test
 import (
 	"testing"
 
-	"godash/slices"
-	"godash/utils"
+	"github.com/GrewalAS/godash/slices"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestFlatten(t *testing.T) {

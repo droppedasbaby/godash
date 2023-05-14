@@ -3,8 +3,8 @@ package sets_test
 import (
 	"testing"
 
-	"godash/sets"
-	"godash/utils"
+	"github.com/GrewalAS/godash/sets"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestContains_Int(t *testing.T) {

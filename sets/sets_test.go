@@ -4,8 +4,8 @@ import (
 	"sort"
 	"testing"
 
-	"godash/sets"
-	"godash/utils"
+	"github.com/GrewalAS/godash/sets"
+	"github.com/GrewalAS/godash/utils"
 )
 
 func TestToSet(t *testing.T) {

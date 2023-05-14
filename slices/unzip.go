@@ -1,6 +1,6 @@
 package slices
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // Unzip returns two slices, the first containing the first elements of the input pairs,
 // and the second containing the second elements of the input pairs.

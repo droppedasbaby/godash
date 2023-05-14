@@ -1,6 +1,6 @@
 package hashablemaps
 
-import "godash"
+import "github.com/GrewalAS/godash"
 
 // HashableMap is a map of Hashable objects, where the key is the hash of the object.
 type HashableMap[H godash.Hashable] map[string]H

@@ -1,8 +1,8 @@
 package hashablemaps
 
 import (
-	"godash"
-	"godash/maps"
+	"github.com/GrewalAS/godash"
+	"github.com/GrewalAS/godash/maps"
 )
 
 // Keys returns a slice of the keys in the HashableMap.
