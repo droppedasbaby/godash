@@ -10,7 +10,7 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 ## Install
 
 ```shell
-go get github.com/alexandrugrigore/godash
+go get github.com/GrewalAS/godash
 ```
 
 ## To-Do:
