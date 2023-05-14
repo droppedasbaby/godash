@@ -13,7 +13,7 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 go get github.com/GrewalAS/godash
 ```
 
-## To-Do:
+## Completed:
 
 Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function
 that do not have tests are marked with a `-` instead of a `x`.
