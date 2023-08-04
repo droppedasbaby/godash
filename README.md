@@ -122,3 +122,56 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Insert
     - [x] Remove
     - [x] ToSlice
+
+- [ ] Search
+    - [ ] LinearSearch
+    - [ ] BinarySearch
+        - [ ] BisectLeft
+        - [ ] Bisect
+        - [ ] BisectRight
+
+- [ ] Stack
+    - [ ] Push
+    - [ ] Pop
+    - [ ] Peek
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Queue
+    - [ ] Enqueue
+    - [ ] Dequeue
+    - [ ] Peek
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Trie
+    - [ ] Insert
+    - [ ] Search
+    - [ ] StartsWith
+    - [ ] Remove
+
+- [ ] Trees
+    - [ ] Binary Search Trees
+    - [ ] Binary Trees
+    - [ ] AVL Trees
+    - [ ] Red-Black Trees
+
+- [ ] Heaps
+    - [ ] Insert
+    - [ ] Delete
+    - [ ] Extract-Min (for Min-Heap) or Extract-Max (for Max-Heap)
+    - [ ] Peek
+    - [ ] Heapify
+
+- [ ] Priority Queue
+    - [ ] Insert (inserts an element with priority)
+    - [ ] Peek (returns the highest priority element)
+    - [ ] Pop (removes and returns the highest priority element)
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Graphs
+    - [ ] Directed
+    - [ ] Undirected
+    - [ ] Weighted
+    - [ ] Unweighted
