@@ -75,7 +75,11 @@ that do not have tests are marked with a `-` instead of a `x`.
 
 - [x] Conditions
     - [x] ComparableEquality
+    - [x] NumberEquality
     - [x] NumberLessThan
+    - [x] NumberLessThanOrEqual
+    - [x] NumberGreaterThan
+    - [x] NumberGreaterThanOrEqual
     - [x] HashableEquality
     - [x] AnyEquality
 
