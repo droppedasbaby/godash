@@ -14,12 +14,14 @@ go get github.com/GrewalAS/godash
 ```
 
 ## Planned/In Progress:
+- [ ] Think about the additional functions that could be added for equality any type
+
 - [ ] Search
-    - [ ] LinearSearch
-    - [ ] BinarySearch
-        - [ ] BisectLeft
-        - [ ] Bisect
-        - [ ] BisectRight
+    - [-] LinearSearch
+    - [/] BinarySearch
+        - [/] BisectLeft
+        - [/] Search
+        - [/] BisectRight
 
 - [ ] Stack
     - [ ] Push

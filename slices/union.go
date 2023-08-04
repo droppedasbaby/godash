@@ -31,7 +31,7 @@ func UnionHashable[T godash.Hashable](a []T, b []T) (c []T) {
 // UnionWith returns a slice containing the elements of the two input slices. Standard union semantics apply.
 // This is a slow implementation, but it allows for custom equality semantics.
 // The predicate p is used to determine whether two elements are equal.
-func UnionWith[T comparable](a []T, b []T, p func(T, T) bool) (c []T) {
+func UnionWith[T any](a []T, b []T, p func(T, T) bool) (c []T) {
 	c = []T{}
 	c = append(c, a...)
 	for _, e := range b {
