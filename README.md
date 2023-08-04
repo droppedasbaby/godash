@@ -13,6 +13,61 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 go get github.com/GrewalAS/godash
 ```
 
+## Planned/In Progress:
+- [ ] Search
+    - [ ] LinearSearch
+    - [ ] BinarySearch
+        - [ ] BisectLeft
+        - [ ] Bisect
+        - [ ] BisectRight
+
+- [ ] Stack
+    - [ ] Push
+    - [ ] Pop
+    - [ ] Peek
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Queue
+    - [ ] Enqueue
+    - [ ] Dequeue
+    - [ ] Peek
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Trie
+    - [ ] Insert
+    - [ ] Search
+    - [ ] StartsWith
+    - [ ] Remove
+
+- [ ] Trees
+    - [ ] Binary Search Trees
+    - [ ] Binary Trees
+    - [ ] AVL Trees
+    - [ ] Red-Black Trees
+
+- [ ] Heaps
+    - [ ] Insert
+    - [ ] Delete
+    - [ ] Extract-Min (for Min-Heap) or Extract-Max (for Max-Heap)
+    - [ ] Peek
+    - [ ] Heapify
+
+- [ ] Priority Queue
+    - [ ] Insert (inserts an element with priority)
+    - [ ] Peek (returns the highest priority element)
+    - [ ] Pop (removes and returns the highest priority element)
+    - [ ] IsEmpty
+    - [ ] Size
+
+- [ ] Graphs
+    - [ ] Directed
+    - [ ] Undirected
+    - [ ] Weighted
+    - [ ] Unweighted
+
+
 ## Completed:
 
 Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function
@@ -122,56 +177,3 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Insert
     - [x] Remove
     - [x] ToSlice
-
-- [ ] Search
-    - [ ] LinearSearch
-    - [ ] BinarySearch
-        - [ ] BisectLeft
-        - [ ] Bisect
-        - [ ] BisectRight
-
-- [ ] Stack
-    - [ ] Push
-    - [ ] Pop
-    - [ ] Peek
-    - [ ] IsEmpty
-    - [ ] Size
-
-- [ ] Queue
-    - [ ] Enqueue
-    - [ ] Dequeue
-    - [ ] Peek
-    - [ ] IsEmpty
-    - [ ] Size
-
-- [ ] Trie
-    - [ ] Insert
-    - [ ] Search
-    - [ ] StartsWith
-    - [ ] Remove
-
-- [ ] Trees
-    - [ ] Binary Search Trees
-    - [ ] Binary Trees
-    - [ ] AVL Trees
-    - [ ] Red-Black Trees
-
-- [ ] Heaps
-    - [ ] Insert
-    - [ ] Delete
-    - [ ] Extract-Min (for Min-Heap) or Extract-Max (for Max-Heap)
-    - [ ] Peek
-    - [ ] Heapify
-
-- [ ] Priority Queue
-    - [ ] Insert (inserts an element with priority)
-    - [ ] Peek (returns the highest priority element)
-    - [ ] Pop (removes and returns the highest priority element)
-    - [ ] IsEmpty
-    - [ ] Size
-
-- [ ] Graphs
-    - [ ] Directed
-    - [ ] Undirected
-    - [ ] Weighted
-    - [ ] Unweighted
