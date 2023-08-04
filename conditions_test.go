@@ -16,11 +16,39 @@ func runTwoArgumentTestCasesForComparableEquality[T comparable](
 	utils.RunTwoArgumentTestCases[T](t, "ComparableEquality()", godash.ComparableEquality[T], testCases)
 }
 
+func runTestCaseForNumberEquality[N godash.Number](
+	t *testing.T, testCases []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[N, N], bool],
+) {
+	t.Helper()
+	utils.RunTwoArgumentTestCases[N](t, "NumberEquality()", godash.NumberEquality[N], testCases)
+}
+
 func runTestCaseForNumberLessThan[N godash.Number](
 	t *testing.T, testCases []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[N, N], bool],
 ) {
 	t.Helper()
 	utils.RunTwoArgumentTestCases[N](t, "NumberLessThan()", godash.NumberLessThan[N], testCases)
+}
+
+func runTestCaseForNumberLessThanOrEqual[N godash.Number](
+	t *testing.T, testCases []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[N, N], bool],
+) {
+	t.Helper()
+	utils.RunTwoArgumentTestCases[N](t, "NumberLessThanOrEqual()", godash.NumberLessThanOrEqual[N], testCases)
+}
+
+func runTestCaseForNumberGreaterThan[N godash.Number](
+	t *testing.T, testCases []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[N, N], bool],
+) {
+	t.Helper()
+	utils.RunTwoArgumentTestCases[N](t, "NumberGreaterThan()", godash.NumberGreaterThan[N], testCases)
+}
+
+func runTestCaseForNumberGreaterThanOrEqual[N godash.Number](
+	t *testing.T, testCases []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[N, N], bool],
+) {
+	t.Helper()
+	utils.RunTwoArgumentTestCases[N](t, "NumberGreaterThanOrEqual()", godash.NumberGreaterThanOrEqual[N], testCases)
 }
 
 func TestComparableEquality(t *testing.T) {
@@ -86,6 +114,51 @@ func TestComparableEquality(t *testing.T) {
 	runTwoArgumentTestCasesForComparableEquality(t, testCasesStrings)
 }
 
+func TestNumberEquality(t *testing.T) {
+	t.Parallel()
+
+	testCasesInts := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[int, int], bool]{
+		{
+			Name: "equality of two integers",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 1,
+				B: 1,
+			},
+		},
+		{
+			Name: "inequality of two integers",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 1,
+				B: 2,
+			},
+		},
+	}
+
+	testCasesFloats := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[float64, float64], bool]{
+		{
+			Name: "equality of two floats",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 1.0,
+				B: 1.0,
+			},
+		},
+		{
+			Name: "inequality of two floats",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 1.0,
+				B: 2.0,
+			},
+		},
+	}
+
+	runTestCaseForNumberEquality(t, testCasesInts)
+	runTestCaseForNumberEquality(t, testCasesFloats)
+}
+
 func TestNumberLessThan(t *testing.T) {
 	t.Parallel()
 
@@ -129,6 +202,189 @@ func TestNumberLessThan(t *testing.T) {
 
 	runTestCaseForNumberLessThan(t, testCasesInts)
 	runTestCaseForNumberLessThan(t, testCasesFloats)
+}
+
+func TestNumberLessThanOrEqual(t *testing.T) {
+	t.Parallel()
+
+	testCasesInts := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[int, int], bool]{
+		{
+			Name: "less than or equal of two integers (less)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 1,
+				B: 2,
+			},
+		},
+		{
+			Name: "less than or equal of two integers (equal)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 2,
+				B: 2,
+			},
+		},
+		{
+			Name: "not less than or equal of two integers",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 3,
+				B: 2,
+			},
+		},
+	}
+
+	testCasesFloats := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[float64, float64], bool]{
+		{
+			Name: "less than or equal of two floats (less)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 1.0,
+				B: 2.0,
+			},
+		},
+		{
+			Name: "less than or equal of two floats (equal)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 2.0,
+				B: 2.0,
+			},
+		},
+		{
+			Name: "not less than or equal of two floats",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 3.0,
+				B: 2.0,
+			},
+		},
+	}
+
+	runTestCaseForNumberLessThanOrEqual(t, testCasesInts)
+	runTestCaseForNumberLessThanOrEqual(t, testCasesFloats)
+}
+
+func TestNumberGreaterThan(t *testing.T) {
+	t.Parallel()
+
+	testCasesInts := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[int, int], bool]{
+		{
+			Name: "greater than of two integers (greater)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 2,
+				B: 1,
+			},
+		},
+		{
+			Name: "not greater than of two integers (equal)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 2,
+				B: 2,
+			},
+		},
+		{
+			Name: "not greater than of two integers (less)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 1,
+				B: 2,
+			},
+		},
+	}
+
+	testCasesFloats := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[float64, float64], bool]{
+		{
+			Name: "greater than of two floats (greater)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 2.0,
+				B: 1.0,
+			},
+		},
+		{
+			Name: "not greater than of two floats (equal)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 2.0,
+				B: 2.0,
+			},
+		},
+		{
+			Name: "not greater than of two floats (less)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 1.0,
+				B: 2.0,
+			},
+		},
+	}
+
+	runTestCaseForNumberGreaterThan(t, testCasesInts)
+	runTestCaseForNumberGreaterThan(t, testCasesFloats)
+}
+
+func TestNumberGreaterThanOrEqual(t *testing.T) {
+	t.Parallel()
+
+	testCasesInts := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[int, int], bool]{
+		{
+			Name: "greater than or equal of two integers (greater)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 2,
+				B: 1,
+			},
+		},
+		{
+			Name: "greater than or equal of two integers (equal)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 2,
+				B: 2,
+			},
+		},
+		{
+			Name: "not greater than or equal of two integers (less)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[int, int]{
+				A: 1,
+				B: 2,
+			},
+		},
+	}
+
+	testCasesFloats := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[float64, float64], bool]{
+		{
+			Name: "greater than or equal of two floats (greater)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 2.0,
+				B: 1.0,
+			},
+		},
+		{
+			Name: "greater than or equal of two floats (equal)",
+			Want: true,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 2.0,
+				B: 2.0,
+			},
+		},
+		{
+			Name: "not greater than or equal of two floats (less)",
+			Want: false,
+			Args: utils.TwoArgumentTestCasesArgsType[float64, float64]{
+				A: 1.0,
+				B: 2.0,
+			},
+		},
+	}
+
+	runTestCaseForNumberGreaterThanOrEqual(t, testCasesInts)
+	runTestCaseForNumberGreaterThanOrEqual(t, testCasesFloats)
 }
 
 type hashableTestType struct {
