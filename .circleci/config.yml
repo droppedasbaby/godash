@@ -34,23 +34,24 @@ jobs:
       - run: ./create_release.sh
 workflows:
   version: 2
+  tests_before_merge:
+    filters:
+      branches:
+        ignore: master
+    jobs:
+      - tests
   tests_and_release:
+    filters:
+      branches:
+        only: master
+      tags:
+        only: /^v.*/
     jobs:
       - tests
       - approval:
           type: approval
           requires:
             - tests
-          filters:
-            branches:
-              only: master
-            tags:
-              only: /^v.*/
       - release:
           requires:
             - approval
-          filters:
-            branches:
-              only: master
-            tags:
-              only: /^v.*/
