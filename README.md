@@ -175,6 +175,6 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToSlice
 
 - [x] Stack
-  - [x] Push // Modifies original DS, does not return a new one. One liner, no tests.
-  - [x] Pop // Modifies original DS, does not return a new one. One liner, no tests.
-  - [x] Peek // One liner, no tests
+    - [x] Push // Modifies original DS, does not return a new one. One liner, no tests.
+    - [x] Pop // Modifies original DS, does not return a new one. One liner, no tests.
+    - [x] Peek // One liner, no tests
