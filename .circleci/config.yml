@@ -34,12 +34,18 @@ jobs:
       - run: ./create_release.sh
 workflows:
   version: 2
-  tests_and_release:
+  tests:
     jobs:
       - tests:
           filters:
             branches:
               ignore: master
+  tests_and_release:
+    jobs:
+      - tests:
+          filters:
+            branches:
+              only: master
       - approval:
           type: approval
           requires:
