@@ -24,4 +24,3 @@ else
   echo "This is not the main branch, so no release will be created."
   exit 1
 fi
-
