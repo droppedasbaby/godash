@@ -37,8 +37,7 @@ workflows:
 #            - tests_approval
 #      - release_approval:
 #          type: approval
-      - release:
-          context: GITHUB_TOKEN
+      - release
 #          requires:
 #            - tests
 #            - release_approval
