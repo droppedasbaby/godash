@@ -34,7 +34,7 @@ jobs:
       - run: ./create_release.sh
 workflows:
   version: 2
-  tests:
+  tests_before_merge:
     jobs:
       - tests:
           filters:
@@ -50,12 +50,6 @@ workflows:
           type: approval
           requires:
             - tests
-          filters:
-            branches:
-              only: master
       - release:
           requires:
             - approval
-          filters:
-            branches:
-              only: master
