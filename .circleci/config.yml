@@ -1,4 +1,17 @@
 version: 2.1
+commands:
+  create_release:
+    description: "Creates a release"
+    parameters:
+      increment_level:
+        type: string
+        description: "Level to increment version"
+    steps:
+      - run: sudo apt update && sudo apt install -y gh
+      - checkout
+      - run: chmod +x ./create_release.sh
+      - run:
+          command: INCREMENT_LEVEL=<<parameters.increment_level>> ./create_release.sh
 jobs:
   tests:
     working_directory: ~/repo
@@ -18,14 +31,15 @@ jobs:
           command: go test ./... -cover
   release:
     working_directory: ~/repo
-    resource_class: small
     docker:
       - image: cimg/go:1.19
+    resource_class: small
+    parameters:
+      increment_level:
+        type: string
     steps:
-      - run: sudo apt update && sudo apt install -y gh
-      - checkout
-      - run: chmod +x ./create_release.sh
-      - run: ./create_release.sh
+      - create_release:
+          increment_level: <<parameters.increment_level>>
 workflows:
   version: 2
   tests_and_release:
@@ -35,9 +49,29 @@ workflows:
 #      - tests:
 #          requires:
 #            - tests_approval
-#      - release_approval:
-#          type: approval
-      - release
+      - release_major_approval:
+          type: approval
+      - release_minor_approval:
+          type: approval
+      - release_patch_approval:
+          type: approval
+      - release_major:
+          name: release_major
+          increment_level: major
+          requires:
+            - release_major_approval
+      - release_minor:
+          name: release_minor
+          increment_level: minor
+          requires:
+            - release_minor_approval
+      - release_patch:
+          name: release_patch
+          increment_level: patch
+          requires:
+            - release_patch_approval
+      - release:
+          context: release_version
 #          requires:
 #            - tests
 #            - release_approval
