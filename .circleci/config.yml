@@ -37,7 +37,7 @@ workflows:
 #            - tests_approval
 #      - release_approval:
 #          type: approval
-      - release:
+      - release
 #          requires:
 #            - tests
 #            - release_approval
