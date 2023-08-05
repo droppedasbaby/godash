@@ -1,4 +1,5 @@
 version: 2.1
+
 commands:
   create_release:
     description: "Creates a release"
@@ -12,6 +13,7 @@ commands:
       - run: chmod +x ./create_release.sh
       - run:
           command: INCREMENT_LEVEL=<<parameters.increment_level>> ./create_release.sh
+
 jobs:
   tests:
     working_directory: ~/repo
@@ -29,43 +31,50 @@ jobs:
       - run:
           name: "Testing the code"
           command: go test ./... -cover
-  release:
+
+  release_major:
     working_directory: ~/repo
     docker:
       - image: cimg/go:1.19
     resource_class: small
-    parameters:
-      increment_level:
-        type: string
     steps:
       - create_release:
-          increment_level: <<parameters.increment_level>>
+          increment_level: major
+
+  release_minor:
+    working_directory: ~/repo
+    docker:
+      - image: cimg/go:1.19
+    resource_class: small
+    steps:
+      - create_release:
+          increment_level: minor
+
+  release_patch:
+    working_directory: ~/repo
+    docker:
+      - image: cimg/go:1.19
+    resource_class: small
+    steps:
+      - create_release:
+          increment_level: patch
+
 workflows:
   version: 2
   tests_and_release:
     jobs:
-#      - tests_approval:
-#          type: approval
-#      - tests:
-#          requires:
-#            - tests_approval
-      - approval:
+      - release_major_approval:
           type: approval
-      - release:
-          name: release_major
+      - release_minor_approval:
+          type: approval
+      - release_patch_approval:
+          type: approval
+      - release_major:
           requires:
-            - approval
-          parameters:
-            increment_level: 'major'
-      - release:
-          name: release_minor
+            - release_major_approval
+      - release_minor:
           requires:
-            - approval
-          parameters:
-            increment_level: 'minor'
-      - release:
-          name: release_patch
+            - release_minor_approval
+      - release_patch:
           requires:
-            - approval
-          parameters:
-            increment_level: 'patch'
+            - release_patch_approval
