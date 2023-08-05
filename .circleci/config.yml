@@ -43,8 +43,8 @@ workflows:
       - approval:
           type: approval
       - tests:
-        requires:
-          - approval
+          requires:
+            - approval
       - release:
           requires:
             - approval
