@@ -73,8 +73,5 @@ workflows:
             increment_level: patch
           requires:
             - release_patch_approval
-      - release:
-          context: release_version
-#          requires:
 #            - tests
 #            - release_approval
