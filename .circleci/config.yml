@@ -24,6 +24,7 @@ jobs:
     steps:
       - run: sudo apt update && sudo apt install -y gh
       - checkout
+      - run: chmod +x ./create_release.sh
       - run: ./create_release.sh
 workflows:
   version: 2
