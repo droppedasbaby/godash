@@ -39,4 +39,4 @@ workflows:
       - release:
           requires:
             - tests
-            - tests_approval
+            - release_approval
