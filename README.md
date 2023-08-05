@@ -15,10 +15,10 @@ go get github.com/GrewalAS/godash
 
 ## Planned/In Progress:
 - [ ] Search
-    - [ ] LinearSearch
+    - [x] LinearSearch
     - [ ] BinarySearch
         - [ ] BisectLeft
-        - [ ] Bisect
+        - [ ] Search
         - [ ] BisectRight
 
 - [ ] Stack
