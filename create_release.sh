@@ -19,7 +19,7 @@ if [ "${CIRCLE_BRANCH}" = "main" ]; then
       exit 1
   esac
   echo "Creating a new release with tag: $newTag"
-  gh release create "${newTag}" --title "${newTag}" --notes "Release ${newTag}"
+  gh release create "${newTag}" --title "${newTag}" --generate-notes
 else
   echo "This is not the main branch, so no release will be created."
   exit 1
