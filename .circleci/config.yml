@@ -16,6 +16,15 @@ jobs:
       - run:
           name: "Testing the code"
           command: go test ./... -cover
+  release_approval:
+    docker:
+      - image: cimg/go:1.19
+    steps:
+      - checkout
+      - run:
+          name: Hold for approval
+          command: |
+            echo "Pipeline is on hold until approval received"
   release:
     docker:
       - image: cimg/go:1.19
@@ -25,15 +34,16 @@ jobs:
       - run: ./create_release.sh
 workflows:
   version: 2
-  test-and-release:
+  build_and_release:
     jobs:
-      - tests:
-          filters:
-            tags:
-              only: /.*/
-      - release:
+      - tests
+      - approval:
+          type: approval
           requires:
             - tests
+      - release:
+          requires:
+            - approval
           filters:
             branches:
               only: master
