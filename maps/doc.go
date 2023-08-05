@@ -1,2 +1,2 @@
-// Package maps provides functions for manipulating maps in Go.
+// Package maps provides functions for manipulating maps.
 package maps

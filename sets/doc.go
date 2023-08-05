@@ -1,3 +1,3 @@
 // Package sets provides functionality for creating and manipulating
-// set data structures in Go.
+// set data structures.
 package sets
