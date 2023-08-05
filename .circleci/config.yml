@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  tests:
     working_directory: ~/repo
     docker:
       - image: cimg/go:1.19
@@ -16,3 +16,26 @@ jobs:
       - run:
           name: "Testing the code"
           command: go test ./... -cover
+  release:
+    docker:
+      - image: cimg/go:1.19
+    steps:
+      - run: sudo apt update && sudo apt install -y gh
+      - checkout
+      - run: ./create_release.sh
+workflows:
+  version: 2
+  test-and-release:
+    jobs:
+      - tests:
+          filters:
+            tags:
+              only: /.*/
+      - release:
+          requires:
+            - tests
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v.*/
