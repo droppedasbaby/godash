@@ -28,9 +28,10 @@ go get github.com/GrewalAS/godash
     - [-] Size
 
 - [-] Stack
-    - [-] Push // Modifies original DS, does not return a new one. One liner, no tests.
-    - [-] Pop // Modifies original DS, does not return a new one. One liner, no tests.
-    - [-] Peek // One liner, no tests
+    - [-] Push
+    - [-] Pop
+    - [-] Peek
+    - [-] Size
 
 - [ ] Trie
     - [ ] Insert
