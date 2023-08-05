@@ -6,10 +6,10 @@ if [ "${CIRCLE_BRANCH}" = "main" ]; then
   latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
   case $INCREMENT_LEVEL in
     "major")
-      newTag=$(echo $latestTag | awk -F. '/v[0-9]+\.[0-9]+\.[0-9]+/{print $1+1"."$2"."$3}')
+      newTag=$(echo $latestTag | awk -F. '/v[0-9]+\.[0-9]+\.[0-9]+/{print $1+1".0.0"}')
       ;;
     "minor")
-      newTag=$(echo $latestTag | awk -F. '/v[0-9]+\.[0-9]+\.[0-9]+/{print $1"."$2+1"."$3}')
+      newTag=$(echo $latestTag | awk -F. '/v[0-9]+\.[0-9]+\.[0-9]+/{print $1"."$2+1".0"}')
       ;;
     "patch")
       newTag=$(echo $latestTag | awk -F. '/v[0-9]+\.[0-9]+\.[0-9]+/{print $1"."$2"."$3+1}')
