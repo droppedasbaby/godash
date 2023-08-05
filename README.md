@@ -21,18 +21,15 @@ go get github.com/GrewalAS/godash
         - [ ] Search
         - [ ] BisectRight
 
-- [ ] Stack
-    - [ ] Push
-    - [ ] Pop
-    - [ ] Peek
-    - [ ] IsEmpty
-    - [ ] Size
+- [-] Stack
+    - [-] Push
+    - [-] Pop
+    - [-] Peek
 
 - [ ] Queue
     - [ ] Enqueue
     - [ ] Dequeue
     - [ ] Peek
-    - [ ] IsEmpty
     - [ ] Size
 
 - [ ] Trie
