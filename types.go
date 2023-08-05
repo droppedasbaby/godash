@@ -19,7 +19,7 @@ type Iterable[T any] interface {
 	[]T | string
 }
 
-// Number is an interface that represents any numeric type in Go.
+// Number is an interface that represents any numeric type.
 type Number interface {
 	int | int8 | int16 | int32 | int64 | uint | uint8 | uint16 | uint32 | uint64 | uintptr | float32 | float64
 }

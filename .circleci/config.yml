@@ -66,19 +66,37 @@ workflows:
             - tests_approval
       - release_major_approval:
           type: approval
+          filters:
+            branches:
+              only: master
       - release_minor_approval:
           type: approval
+          filters:
+            branches:
+              only: master
       - release_patch_approval:
           type: approval
+          filters:
+            branches:
+              only: master
       - release_major:
           requires:
             - release_major_approval
             - tests
+          filters:
+            branches:
+              only: master
       - release_minor:
           requires:
             - release_minor_approval
             - tests
+          filters:
+            branches:
+              only: master
       - release_patch:
           requires:
             - release_patch_approval
             - tests
+          filters:
+            branches:
+              only: master

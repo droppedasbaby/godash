@@ -1,3 +1,3 @@
 // Package stacks offers various utilities for handling and manipulating
-// stack data structures in Go.
+// stack data structures.
 package stacks
