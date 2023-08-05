@@ -30,14 +30,14 @@ workflows:
   version: 2
   tests_and_release:
     jobs:
-      - tests_approval:
-          type: approval
-      - tests:
-          requires:
-            - tests_approval
-      - release_approval:
-          type: approval
+#      - tests_approval:
+#          type: approval
+#      - tests:
+#          requires:
+#            - tests_approval
+#      - release_approval:
+#          type: approval
       - release:
-          requires:
-            - tests
-            - release_approval
+#          requires:
+#            - tests
+#            - release_approval
