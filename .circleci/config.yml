@@ -44,6 +44,12 @@ workflows:
           type: approval
           requires:
             - tests
+          filters:
+            branches:
+              only: master
       - release:
           requires:
             - approval
+          filters:
+            branches:
+              only: master
