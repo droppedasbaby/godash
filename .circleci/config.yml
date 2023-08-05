@@ -5,7 +5,7 @@ commands:
     parameters:
       increment_level:
         type: string
-        description: "Level to increment version"
+        description: "Version level to increment"
     steps:
       - run: sudo apt update && sudo apt install -y gh
       - checkout
@@ -57,17 +57,20 @@ workflows:
           type: approval
       - release:
           name: release_major
-          increment_level: major
+          parameters:
+            increment_level: major
           requires:
             - release_major_approval
       - release:
           name: release_minor
-          increment_level: minor
+          parameters:
+            increment_level: minor
           requires:
             - release_minor_approval
       - release:
           name: release_patch
-          increment_level: patch
+          parameters:
+            increment_level: patch
           requires:
             - release_patch_approval
       - release:
