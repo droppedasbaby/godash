@@ -43,7 +43,7 @@ workflows:
       - approval:
           type: approval
           requires:
-            - tests_on_master
+            - tests
       - release:
           requires:
             - approval
