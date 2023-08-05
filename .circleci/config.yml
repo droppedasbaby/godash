@@ -31,7 +31,6 @@ jobs:
       - run:
           name: "Testing the code"
           command: go test ./... -cover
-
   release_major:
     working_directory: ~/repo
     docker:
@@ -40,7 +39,6 @@ jobs:
     steps:
       - create_release:
           increment_level: major
-
   release_minor:
     working_directory: ~/repo
     docker:
@@ -49,7 +47,6 @@ jobs:
     steps:
       - create_release:
           increment_level: minor
-
   release_patch:
     working_directory: ~/repo
     docker:
@@ -58,11 +55,15 @@ jobs:
     steps:
       - create_release:
           increment_level: patch
-
 workflows:
   version: 2
   tests_and_release:
     jobs:
+      - tests_approval:
+          type: approval
+      - tests:
+          requires:
+            - tests_approval
       - release_major_approval:
           type: approval
       - release_minor_approval:
@@ -72,9 +73,12 @@ workflows:
       - release_major:
           requires:
             - release_major_approval
+            - tests
       - release_minor:
           requires:
             - release_minor_approval
+            - tests
       - release_patch:
           requires:
             - release_patch_approval
+            - tests
