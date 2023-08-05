@@ -16,17 +16,6 @@ jobs:
       - run:
           name: "Testing the code"
           command: go test ./... -cover
-  release_approval:
-    working_directory: ~/repo
-    resource_class: small
-    docker:
-      - image: cimg/go:1.19
-    steps:
-      - checkout
-      - run:
-          name: Hold for approval
-          command: |
-            echo "Pipeline is on hold until approval received"
   release:
     working_directory: ~/repo
     resource_class: small
@@ -40,11 +29,14 @@ workflows:
   version: 2
   tests_and_release:
     jobs:
-      - approval:
+      - tests_approval:
           type: approval
       - tests:
           requires:
-            - approval
+            - tests_approval
+      - release_approval:
+          type: approval
       - release:
           requires:
-            - approval
+            - tests
+            - tests_approval
