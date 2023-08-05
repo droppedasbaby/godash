@@ -83,11 +83,20 @@ workflows:
           requires:
             - release_major_approval
             - tests
+          filters:
+            branches:
+              only: master
       - release_minor:
           requires:
             - release_minor_approval
             - tests
+          filters:
+            branches:
+              only: master
       - release_patch:
           requires:
             - release_patch_approval
             - tests
+          filters:
+            branches:
+              only: master
