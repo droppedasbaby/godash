@@ -40,14 +40,11 @@ workflows:
   version: 2
   tests_and_release:
     jobs:
-      - tests
       - approval:
           type: approval
-          filters:
-            branches:
-              only: master
-          requires:
-            - tests
+      - tests:
+        requires:
+          - approval
       - release:
           requires:
             - approval
