@@ -55,18 +55,18 @@ workflows:
           type: approval
       - release_patch_approval:
           type: approval
-      - release_major:
-          name: release
+      - release:
+          name: release_major
           increment_level: major
           requires:
             - release_major_approval
-      - release_minor:
-          name: release
+      - release:
+          name: release_minor
           increment_level: minor
           requires:
             - release_minor_approval
-      - release_patch:
-          name: release
+      - release:
+          name: release_patch
           increment_level: patch
           requires:
             - release_patch_approval
