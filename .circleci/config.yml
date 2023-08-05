@@ -49,29 +49,23 @@ workflows:
 #      - tests:
 #          requires:
 #            - tests_approval
-      - release_major_approval:
-          type: approval
-      - release_minor_approval:
-          type: approval
-      - release_patch_approval:
+      - approval:
           type: approval
       - release:
           name: release_major
-          parameters:
-            increment_level: major
           requires:
-            - release_major_approval
+            - approval
+          parameters:
+            increment_level: 'major'
       - release:
           name: release_minor
-          parameters:
-            increment_level: minor
           requires:
-            - release_minor_approval
+            - approval
+          parameters:
+            increment_level: 'minor'
       - release:
           name: release_patch
-          parameters:
-            increment_level: patch
           requires:
-            - release_patch_approval
-#            - tests
-#            - release_approval
+            - approval
+          parameters:
+            increment_level: 'patch'
