@@ -21,11 +21,6 @@ go get github.com/GrewalAS/godash
         - [ ] Search
         - [ ] BisectRight
 
-- [-] Stack
-    - [-] Push
-    - [-] Pop
-    - [-] Peek
-
 - [ ] Queue
     - [ ] Enqueue
     - [ ] Dequeue
@@ -178,3 +173,8 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Insert
     - [x] Remove
     - [x] ToSlice
+
+- [x] Stack
+  - [x] Push // Modifies original DS, does not return a new one. One liner, no tests.
+  - [x] Pop // Modifies original DS, does not return a new one. One liner, no tests.
+  - [x] Peek // One liner, no tests
