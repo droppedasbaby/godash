@@ -6,33 +6,33 @@ import (
 	"github.com/GrewalAS/godash/utils"
 )
 
-func TestNewOptional(t *testing.T) {
+func TestNewOption(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[any], any]{
 		{
-			Name: "new optional of int",
+			Name: "new option of int",
 			Want: 1,
 			Args: utils.SingleArgumentTestCasesArgsType[any]{
 				A: 1,
 			},
 		},
 		{
-			Name: "new optional of string",
+			Name: "new option of string",
 			Want: "hello",
 			Args: utils.SingleArgumentTestCasesArgsType[any]{
 				A: "hello",
 			},
 		},
 		{
-			Name: "new optional of struct",
+			Name: "new option of struct",
 			Want: struct{ Name string }{Name: "John"},
 			Args: utils.SingleArgumentTestCasesArgsType[any]{
 				A: struct{ Name string }{Name: "John"},
 			},
 		},
 		{
-			Name: "new optional of nil",
+			Name: "new option of nil",
 			Want: nil,
 			Args: utils.SingleArgumentTestCasesArgsType[any]{
 				A: nil,
@@ -40,13 +40,13 @@ func TestNewOptional(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases[any](t, "NewOptional()", func(a any) any {
-		o := utils.NewOptional[any](a)
+	utils.RunSingleArgumentTestCases[any](t, "NewOption()", func(a any) any {
+		o := utils.NewOption[any](a)
 		return *o.Value
 	}, testCases)
 }
 
-func TestOptional_IsNil(t *testing.T) {
+func TestOption_IsNil(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[any], bool]{
@@ -80,13 +80,13 @@ func TestOptional_IsNil(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "Optional.IsNil()", func(a any) bool {
-		o := utils.NewOptional[any](a)
+	utils.RunSingleArgumentTestCases(t, "Option.IsNil()", func(a any) bool {
+		o := utils.NewOption[any](a)
 		return o.IsNil()
 	}, testCases)
 }
 
-func TestOptional_IsSome(t *testing.T) {
+func TestOption_IsSome(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[any], bool]{
@@ -120,13 +120,13 @@ func TestOptional_IsSome(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "Optional.IsSome()", func(A any) bool {
-		o := utils.NewOptional[any](A)
+	utils.RunSingleArgumentTestCases(t, "Option.IsSome()", func(A any) bool {
+		o := utils.NewOption[any](A)
 		return o.IsSome()
 	}, testCases)
 }
 
-func TestOptional_Unwrap(t *testing.T) {
+func TestOption_Unwrap(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.SingleArgumentTestCasesArgsType[any], any]{
@@ -153,26 +153,26 @@ func TestOptional_Unwrap(t *testing.T) {
 		},
 	}
 
-	utils.RunSingleArgumentTestCases(t, "Optional.Unwrap()", func(a any) any {
-		o := utils.NewOptional[any](a)
+	utils.RunSingleArgumentTestCases(t, "Option.Unwrap()", func(a any) any {
+		o := utils.NewOption[any](a)
 		return o.Unwrap()
 	}, testCases)
 }
 
-func TestOptional_UnwrapPanic(t *testing.T) {
+func TestOption_UnwrapPanic(t *testing.T) {
 	t.Parallel()
 
-	optional := utils.NewOptional[any](nil)
+	option := utils.NewOption[any](nil)
 	panics := utils.Panics(func() {
-		optional.Unwrap()
+		option.Unwrap()
 	})
 
 	if !panics {
-		t.Errorf("Optional.Unwrap() should panic when Value is nil")
+		t.Errorf("Option.Unwrap() should panic when Value is nil")
 	}
 }
 
-func TestOptional_UnwrapOr(t *testing.T) {
+func TestOption_UnwrapOr(t *testing.T) {
 	t.Parallel()
 
 	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[any, any], any]{
@@ -210,13 +210,13 @@ func TestOptional_UnwrapOr(t *testing.T) {
 		},
 	}
 
-	utils.RunTwoArgumentTestCases(t, "Optional.UnwrapOr()", func(a any, b any) any {
-		o := utils.NewOptional[any](a)
+	utils.RunTwoArgumentTestCases(t, "Option.UnwrapOr()", func(a any, b any) any {
+		o := utils.NewOption[any](a)
 		return o.UnwrapOr(b)
 	}, testCases)
 }
 
-func TestOptional_UnwrapOrElse(t *testing.T) {
+func TestOption_UnwrapOrElse(t *testing.T) {
 	t.Parallel()
 
 	defaultValue := "default"
@@ -244,8 +244,8 @@ func TestOptional_UnwrapOrElse(t *testing.T) {
 		},
 	}
 
-	utils.RunTwoArgumentTestCases(t, "Optional.UnwrapOrElse()", func(a any, b func() any) any {
-		o := utils.NewOptional[any](a)
+	utils.RunTwoArgumentTestCases(t, "Option.UnwrapOrElse()", func(a any, b func() any) any {
+		o := utils.NewOption[any](a)
 		return o.UnwrapOrElse(b)
 	}, testCases)
 }

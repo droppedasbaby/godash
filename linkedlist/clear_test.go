@@ -18,7 +18,7 @@ func TestClear(t *testing.T) {
 		{
 			Name: "Clear empty linked list",
 			Args: utils.SingleArgumentTestCasesArgsType[*linkedlist.LinkedList[int]]{
-				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil},
+				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 			},
 			Want: true,
 		},
@@ -27,7 +27,7 @@ func TestClear(t *testing.T) {
 			Args: utils.SingleArgumentTestCasesArgsType[*linkedlist.LinkedList[int]]{
 				A: func() *linkedlist.LinkedList[int] {
 					node := &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil}
-					return &linkedlist.LinkedList[int]{Head: node, Tail: node}
+					return &linkedlist.LinkedList[int]{Head: node, Tail: node, Length: 1}
 				}(),
 			},
 			Want: true,
@@ -36,7 +36,7 @@ func TestClear(t *testing.T) {
 			Name: "Clear multiple-element linked list",
 			Args: utils.SingleArgumentTestCasesArgsType[*linkedlist.LinkedList[int]]{
 				A: func() *linkedlist.LinkedList[int] {
-					ll := &linkedlist.LinkedList[int]{}
+					ll := &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 					nodes := []*linkedlist.Node[int]{
 						{Value: &multiple[0]},
 						{Value: &multiple[1]},
@@ -70,7 +70,7 @@ func TestClearConnectionBreaks(t *testing.T) {
 		{Value: &values[2]},
 	}
 
-	ll := &linkedlist.LinkedList[int]{}
+	ll := &linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[2], Length: 3}
 	for _, node := range nodes {
 		linkedlist.AddLast[int](ll, node)
 	}

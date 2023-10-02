@@ -14,12 +14,12 @@ go get github.com/GrewalAS/godash
 ```
 
 ## Planned/In Progress:
-- [ ] Search
+- [-] Search
     - [x] LinearSearch
-    - [ ] BinarySearch
-        - [ ] BisectLeft
-        - [ ] Search
-        - [ ] BisectRight
+    - [-] BinarySearchWith
+        - [-] BisectLeftWith
+        - [-] BisectWith
+        - [-] BisectRightWith
 
 - [-] Queue
     - [-] Enqueue
@@ -38,12 +38,6 @@ go get github.com/GrewalAS/godash
     - [ ] Search
     - [ ] StartsWith
     - [ ] Remove
-
-- [ ] Trees
-    - [ ] Binary Search Trees
-    - [ ] Binary Trees
-    - [ ] AVL Trees
-    - [ ] Red-Black Trees
 
 - [ ] Heaps
     - [ ] Insert
@@ -64,6 +58,11 @@ go get github.com/GrewalAS/godash
     - [ ] Undirected
     - [ ] Weighted
     - [ ] Unweighted
+    - [ ] Trees
+        - [ ] Binary Search Trees
+        - [ ] Binary Trees
+        - [ ] AVL Trees
+        - [ ] Red-Black Trees
 
 
 ## Completed:

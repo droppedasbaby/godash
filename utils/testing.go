@@ -13,7 +13,7 @@ type GenericTestCase[A any, W any] struct {
 	Want W
 }
 
-// GenericTestCaseWithNoWant is a generic test case with an optional want.
+// GenericTestCaseWithNoWant is a generic test case with an option want.
 type GenericTestCaseWithNoWant[A any] struct {
 	Name string
 	Args A
@@ -107,14 +107,14 @@ type TestCasesArgsType[T any] interface {
 	SingleArgumentTestCasesArgsType[T] | TwoArgumentTestCasesArgsType[T, T]
 }
 
-// AddWantToTestCases adds a wants to a sets of test cases with optional wants.
+// AddWantToTestCases adds a wants to a sets of test cases with option wants.
 func AddWantToTestCases[A any, W any, WS []W](
 	data []GenericTestCaseWithNoWant[SingleArgumentTestCasesArgsType[A]],
-	wants []WS) ResultWithError[[]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]] {
+	wants []WS) Result[[]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]] {
 	testCases := make([]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS], len(data))
 
 	if len(wants) != len(data) {
-		return *NewResultWithError(testCases, ErrTestCasesAndWantsLenDiff)
+		return *NewResult(testCases, ErrTestCasesAndWantsLenDiff)
 	}
 
 	for i, element := range data {
@@ -128,5 +128,5 @@ func AddWantToTestCases[A any, W any, WS []W](
 		}
 	}
 
-	return *NewResultWithError(testCases, nil)
+	return *NewResult(testCases, nil)
 }
