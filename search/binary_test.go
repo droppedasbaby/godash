@@ -1,9 +1,10 @@
 package search_test
 
 import (
+	"testing"
+
 	"github.com/GrewalAS/godash/search"
 	"github.com/GrewalAS/godash/utils"
-	"testing"
 )
 
 func TestBisectLeftWith_Int(t *testing.T) {
