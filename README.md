@@ -68,9 +68,9 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Iterable
 
 - [x] Utils
-    - [x] Optional
+    - [x] Option
     - [x] Panics
-    - [x] ResultWithError
+    - [x] Result
     - [x] Testing
 
 - [x] Maps
