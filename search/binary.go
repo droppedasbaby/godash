@@ -6,7 +6,7 @@ package search
 func BisectLeftWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 	l, r := 0, len(s)
 	for l < r {
-		m := l + (r - l) // 2
+		m := l + (r-l)/2
 		if p(s[m], t) {
 			l = m + 1
 		} else {
@@ -21,7 +21,7 @@ func BisectLeftWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 func BisectRightWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 	l, r := 0, len(s)
 	for l < r {
-		m := l + (r - l) // 2
+		m := l + (r-l)/2
 		if p(t, s[m]) {
 			r = m
 		} else {

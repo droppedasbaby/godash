@@ -14,12 +14,6 @@ go get github.com/GrewalAS/godash
 ```
 
 ## Planned/In Progress:
-- [-] Search
-    - [x] LinearSearch
-    - [-] BinarySearchWith
-        - [-] BisectLeftWith
-        - [-] BisectWith
-        - [-] BisectRightWith
 
 - [-] Queue
     - [-] Enqueue
@@ -178,3 +172,10 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] Insert
     - [x] Remove
     - [x] ToSlice
+
+- [x] Search
+  - [x] LinearSearch
+  - [x] BinarySearchWith
+    - [x] BisectLeftWith
+    - [x] BisectWith
+    - [x] BisectRightWith
