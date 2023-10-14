@@ -18,14 +18,14 @@ func TestFromSlice(t *testing.T) {
 		{
 			Name: "From empty slice",
 			Args: utils.SingleArgumentTestCasesArgsType[[]int]{A: []int{}},
-			Want: linkedlist.LinkedList[int]{Head: nil, Tail: nil},
+			Want: linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 		},
 		{
 			Name: "From single element slice",
 			Args: utils.SingleArgumentTestCasesArgsType[[]int]{A: single},
 			Want: func() linkedlist.LinkedList[int] {
 				node := &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil}
-				return linkedlist.LinkedList[int]{Head: node, Tail: node}
+				return linkedlist.LinkedList[int]{Head: node, Tail: node, Length: 1}
 			}(),
 		},
 		{
@@ -40,7 +40,7 @@ func TestFromSlice(t *testing.T) {
 				nodes[0].Next = nodes[1]
 				nodes[1].Prev, nodes[1].Next = nodes[0], nodes[2]
 				nodes[2].Prev = nodes[1]
-				return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[2]}
+				return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[2], Length: 3}
 			}(),
 		},
 	}
@@ -70,7 +70,7 @@ func TestToSlice(t *testing.T) {
 		{
 			Name: "To slice from empty linked list",
 			Args: utils.SingleArgumentTestCasesArgsType[linkedlist.LinkedList[int]]{
-				A: linkedlist.LinkedList[int]{Head: nil, Tail: nil},
+				A: linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 			},
 			Want: []int{},
 		},
@@ -81,7 +81,7 @@ func TestToSlice(t *testing.T) {
 					nodes := []*linkedlist.Node[int]{
 						{Value: &single[0]},
 					}
-					return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0]}
+					return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0], Length: 1}
 				}(),
 			},
 			Want: single,
@@ -98,7 +98,7 @@ func TestToSlice(t *testing.T) {
 					nodes[0].Next = nodes[1]
 					nodes[1].Prev, nodes[1].Next = nodes[0], nodes[2]
 					nodes[2].Prev = nodes[1]
-					return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[2]}
+					return linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[2], Length: 3}
 				}(),
 			},
 			Want: multiple,

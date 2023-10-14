@@ -23,7 +23,7 @@ func TestGet(t *testing.T) {
 	singleNodes := []*linkedlist.Node[customType]{
 		{Prev: nil, Value: &single[0], Next: nil},
 	}
-	singleLL := linkedlist.LinkedList[customType]{}
+	singleLL := linkedlist.LinkedList[customType]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast[customType](&singleLL, singleNodes[0])
 
 	multiple := []customType{e1, e2, e3}
@@ -32,7 +32,7 @@ func TestGet(t *testing.T) {
 		{Prev: nil, Value: &multiple[1], Next: nil},
 		{Prev: nil, Value: &multiple[2], Next: nil},
 	}
-	multipleLL := linkedlist.LinkedList[customType]{}
+	multipleLL := linkedlist.LinkedList[customType]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[0])
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[1])
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[2])

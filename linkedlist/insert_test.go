@@ -43,7 +43,7 @@ func TestInsert(t *testing.T) {
 		{
 			Name: "Insert into empty list",
 			Args: utils.ThreeArgumentTestCasesArgsType[linkedlist.LinkedList[int], int, *linkedlist.Node[int]]{
-				A: linkedlist.LinkedList[int]{},
+				A: linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 				B: 0,
 				C: &linkedlist.Node[int]{Value: new(int), Prev: nil, Next: nil},
 			},
@@ -110,7 +110,7 @@ func TestInsert_TestStruct(t *testing.T) {
 		{
 			Name: "Insert into empty list",
 			Args: utils.ThreeArgumentTestCasesArgsType[linkedlist.LinkedList[testStruct], int, *linkedlist.Node[testStruct]]{
-				A: linkedlist.LinkedList[testStruct]{},
+				A: linkedlist.LinkedList[testStruct]{Head: nil, Tail: nil, Length: 0},
 				B: 0,
 				C: &linkedlist.Node[testStruct]{Value: &testStruct{0, "Zero"}, Prev: nil, Next: nil},
 			},

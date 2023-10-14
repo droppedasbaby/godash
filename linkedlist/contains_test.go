@@ -10,13 +10,13 @@ import (
 func TestContains(t *testing.T) {
 	t.Parallel()
 
-	emptyLL := linkedlist.LinkedList[int]{}
+	emptyLL := linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 
 	single := 0
 	singleNodes := []*linkedlist.Node[int]{
 		{Prev: nil, Value: &single, Next: nil},
 	}
-	singleLL := linkedlist.LinkedList[int]{}
+	singleLL := linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast(&singleLL, singleNodes[0])
 
 	multiple := []int{0, 1, 2}
@@ -25,7 +25,7 @@ func TestContains(t *testing.T) {
 		{Prev: nil, Value: &multiple[1], Next: nil},
 		{Prev: nil, Value: &multiple[2], Next: nil},
 	}
-	multipleLL := linkedlist.LinkedList[int]{}
+	multipleLL := linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast(&multipleLL, multipleNodes[0])
 	linkedlist.AddLast(&multipleLL, multipleNodes[1])
 	linkedlist.AddLast(&multipleLL, multipleNodes[2])
@@ -99,13 +99,13 @@ func TestContains_CustomType(t *testing.T) {
 	e3 := customType{ID: 3, Name: "Charlie"}
 	nonExistent := customType{ID: 4, Name: "David"}
 
-	emptyLL := linkedlist.LinkedList[customType]{}
+	emptyLL := linkedlist.LinkedList[customType]{Head: nil, Tail: nil, Length: 0}
 
 	single := []customType{e1}
 	singleNodes := []*linkedlist.Node[customType]{
 		{Prev: nil, Value: &single[0], Next: nil},
 	}
-	singleLL := linkedlist.LinkedList[customType]{}
+	singleLL := linkedlist.LinkedList[customType]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast[customType](&singleLL, singleNodes[0])
 
 	multiple := []customType{e1, e2, e3}
@@ -114,7 +114,7 @@ func TestContains_CustomType(t *testing.T) {
 		{Prev: nil, Value: &multiple[1], Next: nil},
 		{Prev: nil, Value: &multiple[2], Next: nil},
 	}
-	multipleLL := linkedlist.LinkedList[customType]{}
+	multipleLL := linkedlist.LinkedList[customType]{Head: nil, Tail: nil, Length: 0}
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[0])
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[1])
 	linkedlist.AddLast[customType](&multipleLL, multipleNodes[2])

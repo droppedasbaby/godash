@@ -16,7 +16,7 @@ type LinkedList[T any] struct {
 
 // FromSlice returns a linked list from a slice/array.
 func FromSlice[T any](s []T) (ll LinkedList[T]) {
-	ll = LinkedList[T]{Head: nil, Tail: nil}
+	ll = LinkedList[T]{Head: nil, Tail: nil, Length: 0}
 
 	for _, v := range s {
 		val := v

@@ -19,7 +19,7 @@ func TestAddFirst(t *testing.T) {
 		{
 			Name: "Add first node to empty linked list",
 			Args: utils.TwoArgumentTestCasesArgsType[*linkedlist.LinkedList[int], *linkedlist.Node[int]]{
-				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil},
+				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 				B: &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil},
 			},
 			Want: single,
@@ -31,7 +31,7 @@ func TestAddFirst(t *testing.T) {
 					nodes := []*linkedlist.Node[int]{
 						{Value: &double[1]},
 					}
-					return &linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0]}
+					return &linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0], Length: 1}
 				}(),
 				B: &linkedlist.Node[int]{Prev: nil, Value: &double[0], Next: nil},
 			},
@@ -41,7 +41,7 @@ func TestAddFirst(t *testing.T) {
 			Name: "Add first node to multiple elements linked list",
 			Args: utils.TwoArgumentTestCasesArgsType[*linkedlist.LinkedList[int], *linkedlist.Node[int]]{
 				A: func() *linkedlist.LinkedList[int] {
-					ll := &linkedlist.LinkedList[int]{}
+					ll := &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 					nodes := []*linkedlist.Node[int]{
 						{Value: &multiple[1]},
 						{Value: &multiple[2]},
@@ -76,7 +76,7 @@ func TestAddLast(t *testing.T) {
 		{
 			Name: "Add last node to empty linked list",
 			Args: utils.TwoArgumentTestCasesArgsType[*linkedlist.LinkedList[int], *linkedlist.Node[int]]{
-				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil},
+				A: &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0},
 				B: &linkedlist.Node[int]{Prev: nil, Value: &single[0], Next: nil},
 			},
 			Want: single,
@@ -88,7 +88,7 @@ func TestAddLast(t *testing.T) {
 					nodes := []*linkedlist.Node[int]{
 						{Value: &double[0]},
 					}
-					return &linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0]}
+					return &linkedlist.LinkedList[int]{Head: nodes[0], Tail: nodes[0], Length: 0}
 				}(),
 				B: &linkedlist.Node[int]{Prev: nil, Value: &double[1], Next: nil},
 			},
@@ -98,7 +98,7 @@ func TestAddLast(t *testing.T) {
 			Name: "Add last node to multiple elements linked list",
 			Args: utils.TwoArgumentTestCasesArgsType[*linkedlist.LinkedList[int], *linkedlist.Node[int]]{
 				A: func() *linkedlist.LinkedList[int] {
-					ll := &linkedlist.LinkedList[int]{}
+					ll := &linkedlist.LinkedList[int]{Head: nil, Tail: nil, Length: 0}
 					nodes := []*linkedlist.Node[int]{
 						{Value: &multiple[0]},
 						{Value: &multiple[1]},
