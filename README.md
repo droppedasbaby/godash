@@ -41,10 +41,10 @@ go get github.com/GrewalAS/godash
         - [ ] Red-Black Trees
 
 - [ ] Trie
-  - [ ] Insert
-  - [ ] Search
-  - [ ] StartsWith
-  - [ ] Remove
+    - [ ] Insert
+    - [ ] Search
+    - [ ] StartsWith
+    - [ ] Remove
 
 ## Completed:
 
@@ -161,20 +161,21 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] ToSlice
 
 - [x] Search
-  - [x] LinearSearch
-  - [x] BinarySearchWith
-    - [x] BisectLeftWith
-    - [x] BisectWith
-    - [x] BisectRightWith
+    - [x] LinearSearch
+    - [x] BinarySearch
+    - [x] Bisect
+        - [x] BisectLeftWith
+        - [x] BisectWith
+        - [x] BisectRightWith
 
 - [x] Queue // Incredibly simple, no tests
-  - [x] Enqueue
-  - [x] Dequeue
-  - [x] Peek
-  - [x] Size
+    - [x] Enqueue
+    - [x] Dequeue
+    - [x] Peek
+    - [x] Size
 
 - [x] Stack // Incredibly simple, no tests
-  - [x] Push
-  - [x] Pop
-  - [x] Peek
-  - [x] Size
+    - [x] Push
+    - [x] Pop
+    - [x] Peek
+    - [x] Size
