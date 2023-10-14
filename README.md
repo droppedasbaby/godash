@@ -15,24 +15,6 @@ go get github.com/GrewalAS/godash
 
 ## Planned/In Progress:
 
-- [-] Queue
-    - [-] Enqueue
-    - [-] Dequeue
-    - [-] Peek
-    - [-] Size
-
-- [-] Stack
-    - [-] Push
-    - [-] Pop
-    - [-] Peek
-    - [-] Size
-
-- [ ] Trie
-    - [ ] Insert
-    - [ ] Search
-    - [ ] StartsWith
-    - [ ] Remove
-
 - [ ] Heaps
     - [ ] Insert
     - [ ] Delete
@@ -58,6 +40,11 @@ go get github.com/GrewalAS/godash
         - [ ] AVL Trees
         - [ ] Red-Black Trees
 
+- [ ] Trie
+  - [ ] Insert
+  - [ ] Search
+  - [ ] StartsWith
+  - [ ] Remove
 
 ## Completed:
 
@@ -179,3 +166,15 @@ that do not have tests are marked with a `-` instead of a `x`.
     - [x] BisectLeftWith
     - [x] BisectWith
     - [x] BisectRightWith
+
+- [x] Queue // Incredibly simple, no tests
+  - [x] Enqueue
+  - [x] Dequeue
+  - [x] Peek
+  - [x] Size
+
+- [x] Stack // Incredibly simple, no tests
+  - [x] Push
+  - [x] Pop
+  - [x] Peek
+  - [x] Size
