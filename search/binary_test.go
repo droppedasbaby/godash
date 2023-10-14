@@ -278,3 +278,69 @@ func TestBisectWith(t *testing.T) {
 	}
 	utils.RunThreeArgumentTestCases(t, "BisectWith", search.BisectWith[int], testCases)
 }
+
+func TestBinarySearch_Int(t *testing.T) {
+	t.Parallel()
+
+	testCases := []utils.GenericTestCase[
+		utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool], int]{
+		{
+			Name: "Empty Int Slice",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{}, B: 3, C: func(a, b int) bool { return a < b },
+			},
+			Want: -1,
+		},
+		{
+			Name: "Single Element Slice, Target Found",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{3}, B: 3, C: func(a, b int) bool { return a < b },
+			},
+			Want: 0,
+		},
+		{
+			Name: "Single Element Slice, Target Not Found",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{3}, B: 4, C: func(a, b int) bool { return a < b },
+			},
+			Want: -1,
+		},
+		{
+			Name: "Target Is First Element In Int Slice",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{1, 2, 3, 4, 5}, B: 1, C: func(a, b int) bool { return a < b },
+			},
+			Want: 0,
+		},
+		{
+			Name: "Target Is Last Element In Int Slice",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{1, 2, 3, 4, 5}, B: 5, C: func(a, b int) bool { return a < b },
+			},
+			Want: 4,
+		},
+		{
+			Name: "Target In Int Slice",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{1, 2, 3, 4, 5}, B: 3, C: func(a, b int) bool { return a < b },
+			},
+			Want: 2,
+		},
+		{
+			Name: "Target Not In Int Slice",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{1, 2, 3, 4, 5}, B: 6, C: func(a, b int) bool { return a < b },
+			},
+			Want: -1,
+		},
+		{
+			Name: "Target With Duplicates",
+			Args: utils.ThreeArgumentTestCasesArgsType[[]int, int, func(int, int) bool]{
+				A: []int{1, 1, 2, 2, 3, 3}, B: 2, C: func(a, b int) bool { return a < b },
+			},
+			Want: 2,
+		},
+	}
+
+	utils.RunThreeArgumentTestCases(t, "BinarySearch", search.BinarySearch[int], testCases)
+}
