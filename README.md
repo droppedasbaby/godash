@@ -35,7 +35,7 @@ that do not have tests are marked with a `-` instead of a `x`. Use of functions 
     - [-] Pad
     - [-] Truncate
 
-- [ ] Function
+- [ ] Functions
     - [ ] Debounce
     - [-] Memoize
     - [-] Negate
