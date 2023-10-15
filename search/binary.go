@@ -6,7 +6,6 @@ package search
 func BisectLeftWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 	l, r := 0, len(s)
 	for l < r {
-		//nolint:gomnd // this "magic number" is foundational to BS
 		m := l + (r-l)/2
 		if p(s[m], t) {
 			l = m + 1
@@ -22,7 +21,6 @@ func BisectLeftWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 func BisectRightWith[T any](s []T, t T, p func(T, T) bool) (l int) {
 	l, r := 0, len(s)
 	for l < r {
-		//nolint:gomnd // this "magic number" is foundational to BS
 		m := l + (r-l)/2
 		if p(t, s[m]) {
 			r = m
