@@ -15,6 +15,33 @@ go get github.com/GrewalAS/godash
 
 ## Planned/In Progress:
 
+- [-] Slices/Arrays
+    - [-] Sample
+    - [-] SampleWithSeed
+    - [-] SampleN
+    - [-] SampleNWithSeed
+    - [-] Shuffle
+    - [-] ShuffleWithSeed
+
+- [-] Strings/strutil
+    - [-] CamelCase
+    - [-] SnakeCase
+    - [-] KebabCase
+    - [-] PadLeft
+    - [-] PadRight
+    - [-] Pad
+    - [-] Truncate
+
+- [ ] Function
+    - [ ] Debounce
+    - [ ] Memoize
+    - [ ] MemoizeComparable
+    - [ ] MemoizeHashable
+    - [ ] Negate
+    - [ ] Partial
+    - [ ] Throttle
+    - [ ] Wrap
+
 - [ ] Heaps
     - [ ] Insert
     - [ ] Delete
