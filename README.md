@@ -34,13 +34,10 @@ go get github.com/GrewalAS/godash
 
 - [ ] Function
     - [ ] Debounce
-    - [ ] Memoize
-    - [ ] MemoizeComparable
-    - [ ] MemoizeHashable
-    - [ ] Negate
-    - [ ] Partial
+    - [-] Memoize
+    - [-] MemoizeResult
+    - [-] Negate
     - [ ] Throttle
-    - [ ] Wrap
 
 - [ ] Heaps
     - [ ] Insert
