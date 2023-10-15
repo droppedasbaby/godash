@@ -13,6 +13,9 @@ Feel free to contribute. You can either contribute by adding functions, by addin
 go get github.com/GrewalAS/godash
 ```
 
+**Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function
+that do not have tests are marked with a `-` instead of a `x`. Use of functions marked with `-` is highly discouraged.**
+
 ## Planned/In Progress:
 
 - [-] Slices/Arrays
@@ -35,7 +38,6 @@ go get github.com/GrewalAS/godash
 - [ ] Function
     - [ ] Debounce
     - [-] Memoize
-    - [-] MemoizeResult
     - [-] Negate
     - [ ] Throttle
 
@@ -71,9 +73,6 @@ go get github.com/GrewalAS/godash
     - [ ] Remove
 
 ## Completed:
-
-Only functions that are themselves written and are unit tested are marked as done unless they are one-liners. Function
-that do not have tests are marked with a `-` instead of a `x`.
 
 - [x] Conditions
     - [x] ComparableEquality
