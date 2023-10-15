@@ -1,17 +1,17 @@
 package function
 
-//import (
+// import (
 //	"fmt"
 //	"github.com/GrewalAS/godash"
 //	"sync"
 //)
 //
-//type CacheKeyer interface {
+// type CacheKeyer interface {
 //	Key() string
 //}
 //
 //// Memoize returns a function that caches the results of f using the CacheKeyer provided for the key.
-//func Memoize[R any, T CacheKeyer](f func(T) R) func(T) R {
+// func Memoize[R any, T CacheKeyer](f func(T) R) func(T) R {
 //	cache := make(map[string]R)
 //	mu := sync.RWMutex{}
 //
@@ -35,16 +35,17 @@ package function
 //}
 //
 //// comparableKeyer is a custom type that wraps a Comparable type and implements the CacheKeyer interface.
-//type comparableKeyer[C comparable] struct {
+// type comparableKeyer[C comparable] struct {
 //	v C
 //}
 //
 //// Key returns the string representation of the ComparableKeyer value using the fmt.Sprintf function.
-//func (ck comparableKeyer[C]) Key() string {
+// func (ck comparableKeyer[C]) Key() string {
 //	return fmt.Sprintf("%v", ck.v)
 //}
 //
-//// MemoizeComparable returns a function that caches the results of f using a type that implements Comparable for the key.
+//// MemoizeComparable returns a function that caches the results of f using a type that implements Comparable for the
+//key.
 //func MemoizeComparable[C comparable, R any](f func(C) R) func(comparableKeyer[C]) R {
 //	return Memoize(func(keyer comparableKeyer[C]) R {
 //		return f(keyer.v)

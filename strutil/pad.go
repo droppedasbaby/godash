@@ -47,7 +47,7 @@ func Pad(s string, n int, p string) string {
 	r := strings.Builder{}
 	r.Grow(n)
 	paddingLen := (n - len(s)) / 2
-	extraPad := (n - len(s)) % 2 // 1 if extra padding is needed, otherwise 0
+	extraPad := (n - len(s)) % 2
 
 	for i := 0; i < (paddingLen+extraPad)/len(p); i++ {
 		r.WriteString(p)
