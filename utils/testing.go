@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
@@ -43,6 +42,31 @@ func RunSingleArgumentTestCases[T, R any](
 			}
 		})
 	}
+}
+
+// TestingSlicesEqualWithoutOrder checks whether two slices are equal without order.
+// Used for slices where order is not important or not defined, e.g. maps, sets, random samples.
+func TestingSlicesEqualWithoutOrder[R any](a, b []R) bool {
+	if len(a) != len(b) {
+		return false
+	}
+
+	marked := make([]bool, len(b))
+
+	for _, elemA := range a {
+		found := false
+		for i, elemB := range b {
+			if !marked[i] && reflect.DeepEqual(elemA, elemB) {
+				marked[i] = true
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+	}
+	return true
 }
 
 // TwoArgumentTestCasesArgsType is the type of the arguments for a two argument test case.
@@ -98,35 +122,4 @@ func RunThreeArgumentTestCases[T, U, V, R any](
 			}
 		})
 	}
-}
-
-var ErrTestCasesAndWantsLenDiff = fmt.Errorf("test cases and wants length differ")
-
-// TestCasesArgsType is the type of the arguments for a test case.
-type TestCasesArgsType[T any] interface {
-	SingleArgumentTestCasesArgsType[T] | TwoArgumentTestCasesArgsType[T, T]
-}
-
-// AddWantToTestCases adds a wants to a sets of test cases with option wants.
-func AddWantToTestCases[A any, W any, WS []W](
-	data []GenericTestCaseWithNoWant[SingleArgumentTestCasesArgsType[A]],
-	wants []WS) Result[[]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]] {
-	testCases := make([]GenericTestCase[SingleArgumentTestCasesArgsType[A], WS], len(data))
-
-	if len(wants) != len(data) {
-		return *NewResult(testCases, ErrTestCasesAndWantsLenDiff)
-	}
-
-	for i, element := range data {
-		want := []W{}
-		copy(want, wants[i])
-
-		testCases[i] = GenericTestCase[SingleArgumentTestCasesArgsType[A], WS]{
-			Name: element.Name,
-			Args: element.Args,
-			Want: want,
-		}
-	}
-
-	return *NewResult(testCases, nil)
 }
