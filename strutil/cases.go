@@ -29,13 +29,28 @@ func CamelCase(s string) string {
 
 // convertToCase is a utility function used by public case functions.
 func convertToCase(s string, separator rune) string {
-	r := strings.Builder{}
+	var r strings.Builder
+	nextSeparator := false
 
-	for i, c := range s {
-		if i > 0 && unicode.IsUpper(c) {
-			r.WriteRune(separator)
+	for _, c := range s {
+		if unicode.IsSpace(c) || c == '_' || c == '-' {
+			if !nextSeparator && r.Len() > 0 {
+				r.WriteRune(separator)
+			}
+			nextSeparator = true
+			continue
 		}
-		r.WriteRune(unicode.ToLower(c))
+
+		if unicode.IsUpper(c) {
+			if !nextSeparator && r.Len() > 0 {
+				r.WriteRune(separator)
+			}
+			r.WriteRune(unicode.ToLower(c))
+		} else {
+			r.WriteRune(c)
+		}
+
+		nextSeparator = false
 	}
 
 	return r.String()
