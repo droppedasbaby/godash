@@ -1,9 +1,10 @@
 package strutil_test
 
 import (
+	"testing"
+
 	"github.com/GrewalAS/godash/strutil"
 	"github.com/GrewalAS/godash/utils"
-	"testing"
 )
 
 func TestPadLeft(t *testing.T) {

@@ -7,6 +7,8 @@ import (
 )
 
 func TestTruncate(t *testing.T) {
+	t.Parallel()
+
 	testCases := []utils.GenericTestCase[utils.TwoArgumentTestCasesArgsType[string, int], string]{
 		{
 			Name: "Empty string, no truncation",
