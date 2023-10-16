@@ -19,15 +19,6 @@ go get github.com/GrewalAS/godash
 
 ## Planned/In Progress:
 
-- [-] Strings/strutil
-    - [-] CamelCase
-    - [-] SnakeCase
-    - [-] KebabCase
-    - [-] PadLeft
-    - [-] PadRight
-    - [-] Pad
-    - [-] Truncate
-
 - [ ] Functions
     - [ ] Debounce
     - [-] Memoize
@@ -201,3 +192,12 @@ go get github.com/GrewalAS/godash
     - [x] Pop
     - [x] Peek
     - [x] Size
+
+- [x] Strings/strutil
+    - [x] CamelCase
+    - [x] SnakeCase
+    - [x] KebabCase
+    - [x] PadLeft
+    - [x] PadRight
+    - [x] Pad
+    - [x] Truncate
