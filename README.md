@@ -17,7 +17,7 @@ that do not have tests are marked with a `-` instead of a `x`. Use of functions 
 go get github.com/GrewalAS/godash
 ```
 
-## Planned/In Progress:
+## Planned/In Progress::
 
 - [ ] Functions
     - [ ] Debounce
