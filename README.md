@@ -1,6 +1,7 @@
 # godash
 
-Modeled after the [lodash](https://lodash.com/) library Javascript/Typescript, godash is a collection of useful functions for working with
+Modeled after the [lodash](https://lodash.com/) library Javascript/Typescript, godash is a collection of useful
+functions for working with
 slices/arrays, maps, sets, hashable sets, optionals and more. It is meant to help you write more concise and readable
 code in a functional way.
 
@@ -17,14 +18,6 @@ go get github.com/GrewalAS/godash
 ```
 
 ## Planned/In Progress:
-
-- [-] Slices/Arrays
-    - [-] Sample
-    - [-] SampleWithSeed
-    - [-] SampleN
-    - [-] SampleNWithSeed
-    - [-] Shuffle
-    - [-] ShuffleWithSeed
 
 - [-] Strings/strutil
     - [-] CamelCase
@@ -171,6 +164,12 @@ go get github.com/GrewalAS/godash
     - [x] Unzip
     - [x] Zip
     - [x] ZipWithIndex
+    - [x] Sample
+    - [x] SampleWithSeed
+    - [x] SampleN
+    - [x] SampleNWithSeed
+    - [x] Shuffle
+    - [x] ShuffleWithSeed
 
 - [x] Linked List
     - [x] AddFirst
