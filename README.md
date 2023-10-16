@@ -20,7 +20,6 @@ go get github.com/GrewalAS/godash
 ## Planned/In Progress:
 
 - [ ] Functions
-    - [ ] Debounce
     - [-] Memoize
     - [-] Negate
     - [ ] Throttle
