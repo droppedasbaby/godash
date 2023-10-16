@@ -24,13 +24,6 @@ go get github.com/GrewalAS/godash
     - [-] Negate
     - [ ] Throttle
 
-- [ ] Heaps
-    - [ ] Insert
-    - [ ] Delete
-    - [ ] Extract-Min (for Min-Heap) or Extract-Max (for Max-Heap)
-    - [ ] Peek
-    - [ ] Heapify
-
 - [ ] Priority Queue
     - [ ] Insert (inserts an element with priority)
     - [ ] Peek (returns the highest priority element)
