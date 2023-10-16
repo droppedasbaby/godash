@@ -12,27 +12,27 @@ type CacheKeyer interface {
 
 // Memoize returns a function that caches the results of f using the CacheKeyer provided for the key.
 // The function f should return a value of type R, which will be cached.
-func Memoize[CK CacheKeyer, R any](f func(...any) R, ck CK) func(args ...any) R {
-	cache := make(map[string]R)
+func Memoize[CK CacheKeyer, R any](f func(...any) R, ck CK) func(...any) R {
+	memo := map[string]R{}
 	mu := sync.RWMutex{}
 
 	return func(args ...any) R {
 		key := ck.Key(args...)
 
 		mu.RLock()
-		result, exists := cache[key]
+		val, ok := memo[key]
 		mu.RUnlock()
 
-		if exists {
-			return result
+		if ok {
+			return val
 		}
 
-		result = f(args...)
+		val = f(args...)
 
 		mu.Lock()
-		cache[key] = result
+		memo[key] = val
 		mu.Unlock()
 
-		return result
+		return val
 	}
 }
