@@ -24,30 +24,6 @@ go get github.com/GrewalAS/godash
     - [-] Negate
     - [ ] Throttle
 
-- [ ] Priority Queue
-    - [ ] Insert (inserts an element with priority)
-    - [ ] Peek (returns the highest priority element)
-    - [ ] Pop (removes and returns the highest priority element)
-    - [ ] IsEmpty
-    - [ ] Size
-
-- [ ] Graphs
-    - [ ] Directed
-    - [ ] Undirected
-    - [ ] Weighted
-    - [ ] Unweighted
-    - [ ] Trees
-        - [ ] Binary Search Trees
-        - [ ] Binary Trees
-        - [ ] AVL Trees
-        - [ ] Red-Black Trees
-
-- [ ] Trie
-    - [ ] Insert
-    - [ ] Search
-    - [ ] StartsWith
-    - [ ] Remove
-
 ## Completed:
 
 - [x] Conditions
