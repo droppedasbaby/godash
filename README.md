@@ -18,7 +18,7 @@ codebase for learning purposes or to build upon it.
 go get github.com/GrewalAS/godash
 ```
 
-## Completed:
+## Completed
 
 - [x] Conditions
 
