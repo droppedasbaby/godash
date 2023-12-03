@@ -1,0 +1,8 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignoreWords": ["golangci", "hasahable", "hasahablesets"],
+  "words": ["grewal"],
+  "ignorePaths": ["cspell.json", ".golangci.yml"],
+  "flagWords": []
+}
